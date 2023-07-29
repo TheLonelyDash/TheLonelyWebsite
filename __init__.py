@@ -60,13 +60,13 @@ def paperrockscissors():
 #Terms Page
 @app.route("/terms")
 def terms():
-    return render_template("terms")
+    return render_template("terms.html")
 
 
 #Privacy Policy Page
 @app.route("/privacypolicy")
 def privacypolicy():
-    return render_template("privacypolicy")
+    return render_template("privacypolicy.html")
 
 
 
