@@ -57,9 +57,22 @@ def apps():
 def paperrockscissors():
     return render_template("paperrockscissors.html")
 
+#Terms Page
+@app.route("/terms")
+def terms():
+    return render_template("terms")
 
 
-##### External Links #####
+#Privacy Policy Page
+@app.route("/privacypolicy")
+def privacypolicy():
+    return render_template("privacypolicy")
+
+
+
+
+
+####################### External Links ######################
 
 #Routs to YouTube Channel
 @app.route("/youtube")
