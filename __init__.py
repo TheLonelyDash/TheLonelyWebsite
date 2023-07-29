@@ -12,6 +12,11 @@ def home():
 def about():
     return render_template("about.html")
 
+#About Topher Page
+@app.route("/abouttopher")
+def abouttopher():
+    return render_template("abouttopher.html")
+
 #Wordle Page
 @app.route("/wordle")
 def wordle():
@@ -46,6 +51,11 @@ def contact():
 @app.route("/apps")
 def apps():
     return render_template("apps.html")
+
+#Paper,Rock, Scissors Page
+@app.route("/paperrockscissors")
+def paperrockscissors():
+    return render_template("paperrockscissors.html")
 
 
 

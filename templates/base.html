@@ -42,9 +42,9 @@
                         About
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url_for('wordle') }}">TheLonelyDash</a></li>  
-                        <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">Topher</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">No Idea</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('about') }}">TheLonelyDash</a></li>  
+                        <li><a class="dropdown-item" href="{{ url_for('abouttopher') }}">Topher</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('home') }}">No Idea</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -53,8 +53,8 @@
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url_for('wordle') }}">Wordle Clone</a></li>  
-                        <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">Paper, Rock, Scissors</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">No Idea</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('paperrockscissors') }}">Paper, Rock, Scissors</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('home') }}">No Idea</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -97,8 +97,9 @@
             <div class="social text-center">
                 <div>
                     <a href="{{ url_for('facebook') }}" target="_blank"><img src="{{url_for('static', filename='img/FacebookLogo.png')}}" class="logo hover" width="30"/></a>
-                    <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/YouTubeLogo.png')}}" class="logo" width="30"/></a>
                     <a href="{{ url_for('github') }}" target="_blank"><img src="{{url_for('static', filename='img/GitHubLogo.png')}}" class="logo" width="30"/></a>
+                    <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/YouTubeLogo.png')}}" class="logo" width="30"/></a>
+                    <a href="{{ url_for('github') }}" target="_blank"><img src="{{url_for('static', filename='img/LinkedInLogo.png')}}" class="logo" width="30"/></a>
                 </div>
 
             <ul class="list-inline text-center  colour1">
