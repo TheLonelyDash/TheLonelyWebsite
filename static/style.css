@@ -49,3 +49,21 @@ a:hover {
     width: 30;
     height: 30;
 }
+
+.bg_green{
+    background: rgb(119, 180, 119);
+    color: white;
+}
+
+.bg_pink{
+    background: rgb(212, 160, 169);
+}
+
+.bg_brown{
+    background: rgb(117, 31, 31);
+    color: white;
+}
+
+.center_box {
+    padding: 5%;
+}
