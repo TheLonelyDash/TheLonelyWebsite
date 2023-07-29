@@ -76,4 +76,8 @@ def facebook():
 def github():
     return redirect("https://github.com/TheLonelyDash")
 
+#Routs to linkedin profile
+@app.route("/linkedin")
+def linkedin():
+    return redirect("https://www.linkedin.com/in/TopherShortt")
 
