@@ -23,8 +23,9 @@ a:visited, a:link, a:active {
 
 a:hover {
     text-decoration: none;
-    filter: contrast(10%);
+    color: rgb(129, 201, 147);
 }
+
 
 .btn-outline-success {
     --bs-btn-color: #1ec577;
@@ -48,6 +49,10 @@ a:hover {
     margin: 20px;
     width: 30;
     height: 30;
+}
+
+a:hover .logo {
+    filter: contrast(5%);
 }
 
 .bg_green{
