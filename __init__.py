@@ -42,6 +42,10 @@ def miniprojects():
 def contact():
     return render_template("contact.html")
 
+#Apps Page
+@app.route("/apps")
+def apps():
+    return render_template("apps.html")
 
 
 
