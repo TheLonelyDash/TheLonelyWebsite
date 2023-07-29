@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %} TheLonelyDash-</title>
+
+        <!--FONT: Raleway, used for body-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+        <!--FONT: Montserrat Alternates, used for logo-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--Local CSS-->
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+
+    <Body class = "d-flex flex-column min-vh-100">
+
+<!--------------------------------------Beginning of NavBar--------------------------------->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+                <div class="container-fluid colour1">
+                <a class="navbar-brand mainLogo" href="{{ url_for('home') }}" style="padding-right: 40px;">TheLonelyDash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Games
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('wordle') }}">Wordle Clone</a></li>  
+                        <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">Paper, Rock, Scissors</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">No Idea</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        LeetCode Tutorials
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('pythonleetcode') }}">Python</a></li>  
+                        <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">Java</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">JavaScript</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('miniprojects') }}">Mini-Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                    <!--input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"-->
+                    <!--button class="btn btn-outline-success" type="submit">Search</button-->
+                    </form>
+                </div>
+                </div>
+            </nav>
+        </header>
+
+<!--------------------------------------Beginning of Body--------------------------------->
+
+        <main class="mb-auto mt-5 pt-3">
+
+        {% block body %}
+        {% endblock %} 
+
+        </main>
+
+<!--------------------------------------Beginning of Footer--------------------------------->
+
+        <footer class="footer">
+            <div class="social text-center">
+                <div>
+                    <a href="{{ url_for('facebook') }}" target="_blank"><img src="{{url_for('static', filename='img/FacebookLogo.png')}}" class="logo" width="30"/></a>
+                    <a href="{{ url_for('github') }}" target="_blank"><img src="{{url_for('static', filename='img/GitHubLogo.png')}}" class="logo" width="30"/></a>
+                    <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/YouTubeLogo.png')}}" class="logo" width="30"/></a>
+                </div>
+
+            <ul class="list-inline text-center  colour1">
+                <li class="list-inline-item"><a href="{{ url_for('home') }}">Contact</a></li>
+                <li class="list-inline-item"><a href="{{ url_for('home') }}">Terms</a></li>
+                <li class="list-inline-item"><a href="{{ url_for('home') }}">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright text-center mainLogo" style="font-size: 12px;">TheLonelyDash © 2023</p>
+        </footer>
+    <!--Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </Body>
+</html>

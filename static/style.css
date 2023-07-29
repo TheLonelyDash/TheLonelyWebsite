@@ -1,0 +1,51 @@
+
+:root {
+    --bs-body-font-family: 'Raleway', sans-serif;
+  
+}
+
+.mainLogo {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.page_title {
+    text-align: center;
+}
+
+.colour1 {
+    background: rgb(215, 215, 215);
+}
+
+a:visited, a:link, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color:gray;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #1ec577;
+    --bs-btn-border-color: #1ec577;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1ec577;
+    --bs-btn-hover-border-color: #1ec577;
+    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1ec577;
+    --bs-btn-active-border-color: #1ec577;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #1ec577;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #1ec577754;
+    --bs-gradient: none;
+}
+
+.logo {
+    filter: contrast(30%);
+    margin: 20px;
+    width: 30;
+    height: 30;
+}
