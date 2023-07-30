@@ -58,20 +58,18 @@ a:hover .logo {
 }
 
 .bg_green{
-    background: rgb(119, 180, 119);
+    background: rgb(160, 200, 160);
     color: white;
-
 }
 
 .bg_pink{
-    background: rgb(212, 160, 169);
-
+    background: rgb(215, 160, 170);
+    color: white;
 }
 
 .bg_brown{
-    background: rgb(117, 31, 31);
+    background: rgb(177, 176, 176);
     color: white;
-
 }
 
 .center_box {
