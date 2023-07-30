@@ -75,3 +75,7 @@ a:hover .logo {
 .center_box {
     padding: 5%;
 }
+
+.hamburger {
+    border: none !important;
+}

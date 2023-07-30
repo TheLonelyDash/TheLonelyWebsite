@@ -25,11 +25,11 @@
     <Body class = "d-flex flex-column min-vh-100">
 
 <!--------------------------------------Beginning of NavBar--------------------------------->
-        <header>
+        <header style="margin-left: 10px; margin-right: 10px;">
             <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
                 <div class="container-fluid colour1">
                 <a class="navbar-brand mainLogo" href="{{ url_for('home') }}" style="padding-right: 20px;">TheLonelyDash</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -101,7 +101,7 @@
                     <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/YouTubeLogo.png')}}" class="logo" width="30"/></a>
                     <a href="{{ url_for('linkedin') }}" target="_blank"><img src="{{url_for('static', filename='img/LinkedInLogo.png')}}" class="logo" width="30"/></a>
                 </div>
-            <ul class="list-inline text-center  colour1">
+            <ul class="list-inline text-center  colour1" style="margin-left: 10px; margin-right: 10px;">
                 <li class="list-inline-item"><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li class="list-inline-item"><a href="{{ url_for('terms') }}" target="_blank">Terms</a></li>
                 <li class="list-inline-item"><a href="{{ url_for('privacypolicy') }}" target="_blank"> Privacy Policy</a></li>
