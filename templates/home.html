@@ -3,9 +3,14 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-<div class="page_title">
-    <h1 class="pagetitle"> Welcome. </h1>
-        <h3 class="pagetitle">We're glad you're here! </h3>
+<div class="row">
+    <div class="page_title col-sm-6">
+        <h1 class="pagetitle"> Welcome. </h1>
+            <h3 class="pagetitle">We're glad you're here! </h3>
+    </div>
+    <div class="col-sm-6" style="text-align: center;">
+        <img src="{{url_for('static', filename='img/Chris/ChrisPose1.png')}}" width="400"/>
+    </div>
 </div>
 
 
@@ -18,9 +23,9 @@
         <div class="col-sm-4 bg_pink">
             Play Games and Explore!
         </div>  
-        <div class="col-sm-4 bg_brown">
+        <div class="col-sm-4 bg_grey">
             Our other apps...
-            <img src="{{url_for('static', filename='img/Chris/ChrisPose1.png')}}"/>
+            
         </div>  
     </div>
 </div>
