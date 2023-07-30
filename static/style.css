@@ -88,3 +88,8 @@ a:hover .logo {
 .welcome {
     display: flex;
 }
+
+.overall {
+    max-width: 1000px;
+    margin: auto;
+}
