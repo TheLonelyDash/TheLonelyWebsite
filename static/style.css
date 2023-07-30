@@ -30,19 +30,19 @@ a:hover {
 
 
 .btn-outline-success {
-    --bs-btn-color: #1ec577;
-    --bs-btn-border-color: #1ec577;
+    --bs-btn-color: gray;
+    --bs-btn-border-color: gray;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #1ec577;
-    --bs-btn-hover-border-color: #1ec577;
+    --bs-btn-hover-bg: gray;
+    --bs-btn-hover-border-color: gray;
     --bs-btn-focus-shadow-rgb: 25,135,84;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #1ec577;
-    --bs-btn-active-border-color: #1ec577;
+    --bs-btn-active-bg: gray;
+    --bs-btn-active-border-color: gray;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #1ec577;
+    --bs-btn-disabled-color: gray;
     --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #1ec577754;
+    --bs-btn-disabled-border-color: gray;
     --bs-gradient: none;
 }
 
@@ -58,13 +58,13 @@ a:hover .logo {
 }
 
 .bg_green{
-    background: rgb(144, 183, 255);
+    background: rgb(176, 202, 252);
     color: white;
 }
 
 .bg_pink{
-    background: rgb(215, 160, 170);
-    color: white;
+    background: #d6f3e1;
+    color: black;
 }
 
 .bg_grey{
@@ -73,17 +73,18 @@ a:hover .logo {
 }
 
 .center_box {
-    padding: 5%;
+    padding: 20px;
+    text-align: center;
 }
 
 .hamburger {
     border: none !important;
 }
 
-.min-vh-100 {
-    
-}
-
 .bigcenter {
     align-items: center;
+}
+
+.welcome {
+    display: flex;
 }
