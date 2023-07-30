@@ -13,9 +13,9 @@
 }
 
 .colour1 {
-    background: rgb(215, 215, 215);
     margin-left: 10px; 
     margin-right: 10px;
+    border-bottom: 1px solid gray;
 }
 
 a:visited, a:link, a:active {
@@ -58,7 +58,7 @@ a:hover .logo {
 }
 
 .bg_green{
-    background: rgb(160, 200, 160);
+    background: rgb(144, 183, 255);
     color: white;
 }
 
