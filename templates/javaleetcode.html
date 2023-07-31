@@ -7,5 +7,20 @@
     <h1 class="pagetitle"> Java LeetCode Tutorials </h1>
 </div>
 
+<!------------- Creation of Search Bar -------------->
+<div class="search-wrapper">
+    <label for="search" class="searchbar">Search LeetCode Solutions: </label><input type="search" id="search" data-search class="searchbarinput" placeholder="Type here!">
+  </div>
+
+  <!------------- Creation of Cards Template-------------->
+<div class="leet-cards" data-leet-cards-container>
+    <template data-leet-template>
+      <div class="card">
+        <iframe src="" class="video" javaleet-data-video></iframe>
+        <div class="title" javaleet-data-title></div>
+        <div class="body" javaleet-data-body></div>
+      </div>
+    </template>
+  </div>
 
 {% endblock %} 
