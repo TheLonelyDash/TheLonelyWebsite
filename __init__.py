@@ -95,3 +95,8 @@ def github():
 def linkedin():
     return redirect("https://www.linkedin.com/in/TopherShortt")
 
+
+####################### Data Links ######################
+
+github_url = 'https://raw.githubusercontent.com/TheLonelyDash/CapstoneProjectCSV/main/diabetes.csv?token=GHSAT0AAAAAACETP4JEJKU636GMLRUWFRY6ZFBNGZQ'
+data = pd.read_csv(github_url)
