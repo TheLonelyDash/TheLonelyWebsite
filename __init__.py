@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect 
-import pandas as pd
+import csv
+
 
 app = Flask(__name__)
 
@@ -26,17 +27,59 @@ def wordle():
 #Python LeetCode Page
 @app.route("/pythonleetcode")
 def pythonleetcode():
-    return render_template("pythonleetcode.html")
+    with open('static\VideosCSV.csv') as csv_file:
+        data = csv.reader(csv_file, delimiter=',')
+        first_line = True
+        vids = []
+        for row in data:
+            if not first_line:
+                vids.append({
+                    "number" : row[0],
+                    "name" : row[1],
+                    "link" : row[2],
+                    "language" : row[3]
+                })
+            else:
+                first_line = False
+    return render_template("pythonleetcode.html", vids = vids)
 
 #Java LeetCode Page
 @app.route("/javaleetcode")
 def javaleetcode():
-    return render_template("javaleetcode.html")
+    with open('static\VideosCSV.csv') as csv_file:
+        data = csv.reader(csv_file, delimiter=',')
+        first_line = True
+        vids = []
+        for row in data:
+            if not first_line:
+                vids.append({
+                    "number" : row[0],
+                    "name" : row[1],
+                    "link" : row[2],
+                    "language" : row[3]
+                })
+            else:
+                first_line = False
+    return render_template("javaleetcode.html", vids = vids)
 
 #JavaScript LeetCode Page
 @app.route("/javascriptleetcode")
 def javascriptleetcode():
-    return render_template("javascriptleetcode.html")
+    with open('static\VideosCSV.csv') as csv_file:
+        data = csv.reader(csv_file, delimiter=',')
+        first_line = True
+        vids = []
+        for row in data:
+            if not first_line:
+                vids.append({
+                    "number" : row[0],
+                    "name" : row[1],
+                    "link" : row[2],
+                    "language" : row[3]
+                })
+            else:
+                first_line = False
+    return render_template("javascriptleetcode.html", vids = vids)
 
 #Mini-Projects Page
 @app.route("/miniprojects")
@@ -96,7 +139,6 @@ def linkedin():
     return redirect("https://www.linkedin.com/in/TopherShortt")
 
 
-####################### Data Links ######################
 
-github_url = 'https://raw.githubusercontent.com/TheLonelyDash/CapstoneProjectCSV/main/diabetes.csv?token=GHSAT0AAAAAACETP4JEJKU636GMLRUWFRY6ZFBNGZQ'
-data = pd.read_csv(github_url)
+
+

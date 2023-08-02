@@ -7,5 +7,20 @@
     <h1 class="pagetitle"> JavaScript LeetCode Tutorials </h1>
 </div>
 
+{% for vid in vids %}
+    {% if vid.language == "JavaScript"%}
+    <h2>{{ vid.number }}</h2>
+    <p>Name:</p>
+    {{ vid.name }}
+    <br><br>
+    <p>Link:</p>
+    {{ vid.link }}
+    <br><br>
+    <p>Language:</p>
+    {{ vid.language }}
+    <br><br>
+    {% endif %}
+{% endfor %}
+
 
 {% endblock %} 
