@@ -8,20 +8,20 @@
 </div>
 
 <div class="row" style="margin: 10px;">
-  {% for vid in vids %}
-      {% if vid.language == "Java" %}
-      <div class="col-12 col-md-6 col-lg-4">
-          <div class="card">
-              <iframe src="{{ vid.embed }}" style="aspect-ratio: 16/9;"></iframe>
-              <div class="card-body">
-                  <h5 class="card-title"> {{ vid.number }}. {{ vid.name }}</h5>
-                  <p class="card-text">Learning LeetCode using {{ vid.language }}</p>
-              </div>
-          </div>
-          <br>
-      </div>
-      {% endif %}
-  {% endfor %}
+    {% for vid in vids %}
+        {% if vid.language == "Python" %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <iframe src="{{ vid.embed }}" style="aspect-ratio: 16/9;"></iframe>
+                <div class="card-body">
+                    <h5 class="card-title"> {{ vid.number }}. {{ vid.name }}</h5>
+                    <p class="card-text">Learning LeetCode using {{ vid.language }}</p>
+                </div>
+            </div>
+            <br>
+        </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
 {% endblock %} 
