@@ -27,58 +27,19 @@ def wordle():
 #Python LeetCode Page
 @app.route("/pythonleetcode")
 def pythonleetcode():
-    with open('static\VideosCSV.csv') as csv_file:
-        data = csv.reader(csv_file, delimiter=',')
-        first_line = True
-        vids = []
-        for row in data:
-            if not first_line:
-                vids.append({
-                    "number" : row[0],
-                    "name" : row[1],
-                    "link" : row[2],
-                    "language" : row[3]
-                })
-            else:
-                first_line = False
+    vids = read_csv()
     return render_template("pythonleetcode.html", vids = vids)
 
 #Java LeetCode Page
 @app.route("/javaleetcode")
 def javaleetcode():
-    with open('static\VideosCSV.csv') as csv_file:
-        data = csv.reader(csv_file, delimiter=',')
-        first_line = True
-        vids = []
-        for row in data:
-            if not first_line:
-                vids.append({
-                    "number" : row[0],
-                    "name" : row[1],
-                    "link" : row[2],
-                    "language" : row[3]
-                })
-            else:
-                first_line = False
+    vids = read_csv()
     return render_template("javaleetcode.html", vids = vids)
 
 #JavaScript LeetCode Page
 @app.route("/javascriptleetcode")
 def javascriptleetcode():
-    with open('static\VideosCSV.csv') as csv_file:
-        data = csv.reader(csv_file, delimiter=',')
-        first_line = True
-        vids = []
-        for row in data:
-            if not first_line:
-                vids.append({
-                    "number" : row[0],
-                    "name" : row[1],
-                    "link" : row[2],
-                    "language" : row[3]
-                })
-            else:
-                first_line = False
+    vids = read_csv()
     return render_template("javascriptleetcode.html", vids = vids)
 
 #Mini-Projects Page
@@ -142,3 +103,22 @@ def linkedin():
 
 
 
+####################### Read CSV FIle ######################
+
+def read_csv():
+        with open('static\VideosCSV.csv') as csv_file:
+            data = csv.reader(csv_file, delimiter=',')
+            first_line = True
+            vids = []
+            for row in data:
+                if not first_line:
+                    vids.append({
+                        "number" : row[0],
+                        "name" : row[1],
+                        "link" : row[2],
+                        "language" : row[3],
+                        "embed" : row[4]
+                    })
+                else:
+                    first_line = False
+        return vids

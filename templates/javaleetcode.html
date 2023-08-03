@@ -7,19 +7,21 @@
     <h1 class="pagetitle"> Java LeetCode Tutorials </h1>
 </div>
 
-{% for vid in vids %}
-    {% if vid.language == "Java"%}
-    <h2>{{ vid.number }}</h2>
-    <p>Name:</p>
-    {{ vid.name }}
-    <br><br>
-    <p>Link:</p>
-    {{ vid.link }}
-    <br><br>
-    <p>Language:</p>
-    {{ vid.language }}
-    <br><br>
-    {% endif %}
-{% endfor %}
+<div class="row">
+  {% for vid in vids %}
+  {% if vid.language == "Java" %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card" style="height: 250px;">
+      <iframe width="320" height="180" src="{{ vid.embed }}"></iframe>
+      <div class="card-body">
+          <h5 class="card-title"> {{ vid.number }}. {{ vid.name }}</h5>
+          <p class="card-text">Learning LeetCode using {{ vid.language }}</p>
+      </div>
+  </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
 
 {% endblock %} 
+
