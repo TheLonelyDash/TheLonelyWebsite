@@ -89,12 +89,12 @@ number,name,link,language,embed
 169,Majority Element,https://youtu.be/zVQSyyiaFiI,JavaScript,https://www.youtube.com/embed/zVQSyyiaFiI
 169,Majority Element,https://youtu.be/LEBVpwN7J0I,Java,https://www.youtube.com/embed/LEBVpwN7J0I
 169,Majority Element,https://youtu.be/rvcYN2zZ4AA,Python,https://www.youtube.com/embed/rvcYN2zZ4AA
-206,Reverse Linked List,https://youtu.be/taHQwr1jbBc,JavaScript,AAAAAAAA
-206,Reverse Linked List,https://youtu.be/AfIAHfIfSEw,Java,AAAAAAAA
-206,Reverse Linked List,https://youtu.be/k8Hf9aFUKnQ,Python,AAAAAAAA
-217,Contains Duplicate,https://youtu.be/y2QOnfS8BTk,JavaScript,AAAAAAAA
-217,Contains Duplicate,https://youtu.be/ZFaxvqkBtVw,Java,AAAAAAAA
-217,Contains Duplicate,https://youtu.be/wTXfrW44cKU,Python,AAAAAAAA
+206,Reverse Linked List,https://youtu.be/taHQwr1jbBc,JavaScript,https://www.youtube.com/embed/taHQwr1jbBc
+206,Reverse Linked List,https://youtu.be/AfIAHfIfSEw,Java,https://www.youtube.com/embed/AfIAHfIfSEw
+206,Reverse Linked List,https://youtu.be/k8Hf9aFUKnQ,Python,https://www.youtube.com/embed/k8Hf9aFUKnQ
+217,Contains Duplicate,https://youtu.be/y2QOnfS8BTk,JavaScript,https://www.youtube.com/embed/y2QOnfS8BTk
+217,Contains Duplicate,https://youtu.be/ZFaxvqkBtVw,Java,https://www.youtube.com/embed/ZFaxvqkBtVw
+217,Contains Duplicate,https://youtu.be/wTXfrW44cKU,Python,https://www.youtube.com/embed/wTXfrW44cKU
 225,Implement Stack Using Queues,https://youtu.be/YTLOBPpxeNo,Java,AAAAAAAA
 225,Implement Stack Using Queues,https://youtu.be/wWfNdIHSvpw,Python,AAAAAAAA
 234,Palindrome Linked List,https://youtu.be/Sfx6wBE152o,JavaScript,AAAAAAAA
