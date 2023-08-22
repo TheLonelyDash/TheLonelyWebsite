@@ -12,7 +12,9 @@
         {% if vid.language == "JavaScript" %}
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
-                <iframe src="{{ vid.embed }}" style="aspect-ratio: 16/9;"></iframe>
+                <a href="{{ vid.link }}" target = "_blank">
+                    <img src="/static/img/LeetCode/{{vid.number}}/{{vid.language}}.jpg" class="card-img-top" style="aspect-ratio: 16/9;">
+                </a>
                 <div class="card-body">
                     <h5 class="card-title"> {{ vid.number }}. {{ vid.name }}</h5>
                     <p class="card-text">Learning LeetCode using {{ vid.language }}</p>
