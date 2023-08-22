@@ -93,3 +93,28 @@ a:hover .logo {
     max-width: 1000px;
     margin: auto;
 }
+
+.gamebox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    user-select: none;
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: black;
+}
+
+.games{
+    padding: 0px;
+    margin: 0px;
+    border: 2px solid gray;
+    width: 100%;
+}
