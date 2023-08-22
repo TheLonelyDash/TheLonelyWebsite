@@ -101,8 +101,6 @@ def linkedin():
 
 
 
-
-
 ####################### Read CSV File ######################
 
 def read_csv():
