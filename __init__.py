@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect 
-import csv
+import csv, random
 
 
 app = Flask(__name__)
@@ -103,7 +103,7 @@ def linkedin():
 
 
 
-####################### Read CSV FIle ######################
+####################### Read CSV File ######################
 
 def read_csv():
         with open('static\VideosCSV.csv') as csv_file:
@@ -122,3 +122,7 @@ def read_csv():
                 else:
                     first_line = False
         return vids
+
+
+
+        
