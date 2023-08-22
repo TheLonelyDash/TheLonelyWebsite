@@ -65,11 +65,11 @@ function createSprites(){
         return {
             image: image,
             width: cactus.width * scaleRatio,
-            height: cactus.height * scaleRatio
-        }
-
+            height: cactus.height * scaleRatio,
+        };
     });
-    cactiController = new CactiController(ctx, cactiImages, scaleRatio, ground, GROUND_AND_CACTUS_SPEED);
+
+    cactiController = new CactiController(ctx, cactiImages, scaleRatio, GROUND_AND_CACTUS_SPEED);
 }
 
 function setScreen(){
