@@ -16,7 +16,7 @@
             <div class="card">
                 <iframe src="{{ vid.embed }}" style="aspect-ratio: 16/9;"></iframe>
                 <div class="card-body">
-                    <h5 class="card-title"> {{ vid.number }}. {{ vid.name }}</h5>
+                    <h5 class="card-title"> <a href="{{ vid.link }}" target = "_blank">{{ vid.number }}. {{ vid.name }}</a></h5>
                     <p class="card-text">Learning LeetCode using {{ vid.language }}</p>
                 </div>
             </div>
