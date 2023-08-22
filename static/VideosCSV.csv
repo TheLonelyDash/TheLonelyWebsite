@@ -17,6 +17,12 @@ number,name,link,language,embed
 11,Container with Most Water,https://youtu.be/tyGS4jY7kZg,JavaScript,https://www.youtube.com/embed/tyGS4jY7kZg
 11,Container with Most Water,https://youtu.be/3Zlyr38-bXk,Java,https://www.youtube.com/embed/3Zlyr38-bXk
 11,Container with Most Water,https://youtu.be/81AmT2qDbh0,Python,https://www.youtube.com/embed/81AmT2qDbh0
+12,Integer to Roman,https://www.youtube.com/watch?v=sQIQi4UxBuY,Python,https://www.youtube.com/embed/sQIQi4UxBuY
+12,Integer to Roman,https://www.youtube.com/watch?v=II8f3fwpqIc,Java,https://www.youtube.com/embed/II8f3fwpqIc
+12,Integer to Roman,https://www.youtube.com/watch?v=nMZtnSxFJkg,JavaScript,https://www.youtube.com/embed/nMZtnSxFJkg
+13,Roman to Integer,https://www.youtube.com/watch?v=SrtUhjiB0xI,Python,https://www.youtube.com/embed/SrtUhjiB0xI
+13,Roman to Integer,https://www.youtube.com/watch?v=-W3fLCzhWRw,Java,https://www.youtube.com/embed/-W3fLCzhWRw
+13,Roman to Integer,https://www.youtube.com/watch?v=O3HLCOhE1Hg,JavaScript,https://www.youtube.com/embed/O3HLCOhE1Hg
 19,Remove Nth Node from End of List,https://youtu.be/hUqN-rGi1g0,JavaScript,https://www.youtube.com/embed/hUqN-rGi1g0
 19,Remove Nth Node from End of List,https://youtu.be/YzsDrLVSSWY,Java,https://www.youtube.com/embed/YzsDrLVSSWY
 19,Remove Nth Node from End of List,https://youtu.be/NJV9i3Oub3o,Python,https://www.youtube.com/embed/NJV9i3Oub3o
@@ -26,12 +32,21 @@ number,name,link,language,embed
 21,Merge Two Sorted Lists,https://youtu.be/oKySDaY-40U,JavaScript,https://www.youtube.com/embed/oKySDaY-40U
 21,Merge Two Sorted Lists,https://youtu.be/jkmKequUmHA,Java,https://www.youtube.com/embed/jkmKequUmHA
 21,Merge Two Sorted Lists,https://youtu.be/5GtqSOslYgw,Python,https://www.youtube.com/embed/5GtqSOslYgw
+22,Generate Parenthesis,https://youtu.be/JNHy6GpqT6s,Python,https://www.youtube.com/embed/JNHy6GpqT6s
+22,Generate Parenthesis,https://youtu.be/HvipOTnaPOQ,Java,https://www.youtube.com/embed/HvipOTnaPOQ
+22,Generate Parenthesis,https://youtu.be/k4yvl5t6qHg,JavaScript,https://www.youtube.com/embed/k4yvl5t6qHg
 24,Swap Nodes in Pairs,https://youtu.be/2n0N_g7nLXc,JavaScript,https://www.youtube.com/embed/2n0N_g7nLXc
 24,Swap Nodes in Pairs,https://youtu.be/zL02Lytpadc,Java,https://www.youtube.com/embed/zL02Lytpadc
 24,Swap Nodes in Pairs,https://youtu.be/lu1-I1DHtCk,Python,https://www.youtube.com/embed/lu1-I1DHtCk
+26,Remove Duplicates,https://youtu.be/1JO16GXEyss,Python,https://www.youtube.com/embed/1JO16GXEyss
+26,Remove Duplicates,https://youtu.be/CpaJ8MHOq38,Java,https://www.youtube.com/embed/CpaJ8MHOq38
+26,Remove Duplicates,https://youtu.be/1LY7PzyEzOk,JavaScript,https://www.youtube.com/embed/1LY7PzyEzOk
 27,Remove Element,https://youtu.be/LKNJtRCt11k,JavaScript,https://www.youtube.com/embed/LKNJtRCt11k
 27,Remove Element,https://youtu.be/oO3T7NozcfA,Java,https://www.youtube.com/embed/oO3T7NozcfA
 27,Remove Element,https://youtu.be/ry5omQWPbFo,Python,https://www.youtube.com/embed/ry5omQWPbFo
+28,Find the Index of the First Occurrence in a String,https://youtu.be/kaRex42EDnU,Python,https://www.youtube.com/embed/kaRex42EDnU
+28,Find the Index of the First Occurrence in a String,https://youtu.be/VYzj0wsf1WA,Java,https://www.youtube.com/embed/VYzj0wsf1WA
+28,Find the Index of the First Occurrence in a String,https://youtu.be/Xc4Hm56tm5g,JavaScript,https://www.youtube.com/embed/Xc4Hm56tm5g
 34,Find First and Last Position of Element in Sorted Array,https://youtu.be/SUYSC3RqtMA,JavaScript,https://www.youtube.com/embed/SUYSC3RqtMA
 34,Find First and Last Position of Element in Sorted Array,https://youtu.be/VtJWu2I9jRU,Java,https://www.youtube.com/embed/VtJWu2I9jRU
 34,Find First and Last Position of Element in Sorted Array,https://youtu.be/IsnLh0TF-JU,Python,https://www.youtube.com/embed/IsnLh0TF-JU
@@ -150,9 +165,5 @@ number,name,link,language,embed
 1480,Running Sum of 1d Array,https://youtu.be/4kKgXjtPc60,Python,https://www.youtube.com/embed/4kKgXjtPc60
 2619,Array Prototype Last,https://youtu.be/rgEAAkoW_Vs,JavaScript,https://www.youtube.com/embed/rgEAAkoW_Vs
 2620,Counter,https://youtu.be/KjC37um82c4,JavaScript,https://www.youtube.com/embed/KjC37um82c4
-12,Integer to Roman,https://www.youtube.com/watch?v=sQIQi4UxBuY,Python,https://www.youtube.com/embed/sQIQi4UxBuY
-12,Integer to Roman,https://www.youtube.com/watch?v=II8f3fwpqIc,Java,https://www.youtube.com/embed/II8f3fwpqIc
-12,Integer to Roman,https://www.youtube.com/watch?v=nMZtnSxFJkg,JavaScript,https://www.youtube.com/embed/nMZtnSxFJkg
-13,Roman to Integer,https://www.youtube.com/watch?v=SrtUhjiB0xI,Python,https://www.youtube.com/embed/SrtUhjiB0xI
-13,Roman to Integer,https://www.youtube.com/watch?v=-W3fLCzhWRw,Java,https://www.youtube.com/embed/-W3fLCzhWRw
-13,Roman to Integer,https://www.youtube.com/watch?v=O3HLCOhE1Hg,JavaScript,https://www.youtube.com/embed/O3HLCOhE1Hg
+
+
