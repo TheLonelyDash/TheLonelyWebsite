@@ -15,4 +15,20 @@ export default class Cactus{
     draw(){
         this.ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
+
+    //ADJUST collideWITH as it hold the variable to see overlap!
+
+    collideWith(sprite){
+        const adjustBy = 1.4;
+        if (
+            sprite.x < this.x + this.width / adjustBy &&
+            sprite.x + sprite.width / adjustBy > this.x &&
+            sprite.y < this.y + this.height / adjustBy &&
+            sprite.height + sprite.y / adjustBy > this.y
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
