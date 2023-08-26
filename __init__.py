@@ -62,6 +62,11 @@ def apps():
 def paperrockscissors():
     return render_template("paperrockscissors.html")
 
+#Run Guy Game Page
+@app.route("/runguy")
+def runguy():
+    return render_template("runguy.html")
+
 #Terms Page
 @app.route("/terms")
 def terms():
