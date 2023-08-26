@@ -4,49 +4,49 @@ import CactiController from "/static/runGuy/CactiController.js";
 import Score from "/static/runGuy/Score.js";
 
 
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
+const canvas =                      document.getElementById("game");
+const ctx =                         canvas.getContext("2d");
 
-const GAME_SPEED_START = 1.0;
-const GAME_SPEED_INCREMENT = 0.00002; 
+const GAME_SPEED_START =            1.0;
+const GAME_SPEED_INCREMENT =        0.00002; 
 
-const GAME_WIDTH = 800;
-const GAME_HEIGHT = 200;
-const PLAYER_WIDTH = 88/1.5;    //Player width is now 58
-const PLAYER_HEIGHT = 94 / 1.5; //Player height is now 62
-const MAX_JUMP_HEIGHT = GAME_HEIGHT;
-const MIN_JUMP_HEIGHT = 150;
-const GROUND_WIDTH = 2400; //Ground image width
-const GROUND_HEIGHT = 24; //Ground image height
-const GROUND_AND_CACTUS_SPEED = 0.5;
+const GAME_WIDTH =                  800;
+const GAME_HEIGHT =                 200;
+const PLAYER_WIDTH =                88/1.5;    //Player width is now 58
+const PLAYER_HEIGHT =               94 / 1.5; //Player height is now 62
+const MAX_JUMP_HEIGHT =             GAME_HEIGHT;
+const MIN_JUMP_HEIGHT =             150;
+const GROUND_WIDTH =                2400; //Ground image width
+const GROUND_HEIGHT =               24; //Ground image height
+const GROUND_AND_CACTUS_SPEED =     0.5;
 
 const CACTI_CONFIG = [
     {width:48/1.5, height: 100/1.5, image: "/static/img/IntroGame/cactus_1.png"},     //Cactus1 width and height
     {width:98/1.5, height: 100/1.5, image: "/static/img/IntroGame/cactus_2.png"},     //Cactus2 width and height
-    {width:48/1.5, height: 100/1.5, image: "/static/img/IntroGame/cactus_3.png"}     //Cactus3 width and height
+    {width:48/1.5, height: 100/1.5, image: "/static/img/IntroGame/cactus_3.png"}      //Cactus3 width and height
 ]
 
 //All GAME OBJECTS
-let player = null;
-let ground = null;
-let cactiController = null;
-let score = null;
+let player =            null;
+let ground =            null;
+let cactiController =   null;
+let score =             null;
 
-let scaleRatio = null;
-let previousTime = null;
-let gameSpeed = GAME_SPEED_START;
-let gameOver = false;
-let hasAddedEventListenerForRestart = false;
-let waitingToStart = true;
+let scaleRatio =        null;
+let previousTime =      null;
+let gameSpeed =         GAME_SPEED_START;
+let gameOver =          false;
+let hAELFR =            false;
+let waitingToStart =    true;
 
 function createSprites(){
-    const playerWidthInGame = PLAYER_WIDTH * scaleRatio;
-    const playerHeightInGame = PLAYER_HEIGHT * scaleRatio;
-    const minJumpHeight = MIN_JUMP_HEIGHT * scaleRatio;
-    const maxJumpHeight = MAX_JUMP_HEIGHT * scaleRatio;
+    const playerWidthInGame =   PLAYER_WIDTH * scaleRatio;
+    const playerHeightInGame =  PLAYER_HEIGHT * scaleRatio;
+    const minJumpHeight =       MIN_JUMP_HEIGHT * scaleRatio;
+    const maxJumpHeight =       MAX_JUMP_HEIGHT * scaleRatio;
 
-    const groundWidthInGame = GROUND_WIDTH * scaleRatio;
-    const groundHeightInGame = GROUND_HEIGHT * scaleRatio;
+    const groundWidthInGame =   GROUND_WIDTH * scaleRatio;
+    const groundHeightInGame =  GROUND_HEIGHT * scaleRatio;
 
     player = new Player(
         ctx, 
@@ -64,13 +64,13 @@ function createSprites(){
         scaleRatio
     )
 
-    const cactiImages = CACTI_CONFIG.map(cactus =>{
-        const image = new Image();
-        image.src = cactus.image;
+    const cactiImages =     CACTI_CONFIG.map(cactus =>{
+        const image =       new Image();
+        image.src =         cactus.image;
         return {
-            image: image,
-            width: cactus.width * scaleRatio,
-            height: cactus.height * scaleRatio,
+            image:          image,
+            width:          cactus.width * scaleRatio,
+            height:         cactus.height * scaleRatio,
         };
     });
 
@@ -85,8 +85,8 @@ function createSprites(){
 }
 
 function setScreen(){
-    scaleRatio = getScaleRatio();
-    canvas.width = GAME_WIDTH * scaleRatio;
+    scaleRatio =    getScaleRatio();
+    canvas.width =  GAME_WIDTH * scaleRatio;
     canvas.height = GAME_HEIGHT * scaleRatio;
     createSprites();
 }
@@ -122,17 +122,17 @@ function getScaleRatio(){
 }
 
 function showGameOver(){
-    const fontSize = 70 * scaleRatio;
-    ctx.font = `${fontSize}px Raleway`;
-    ctx.fillStyle = "gray";
-    const x = canvas.width / 4.5;
-    const y = canvas.height / 2;
+    const fontSize =    70 * scaleRatio;
+    ctx.font =          `${fontSize}px Raleway`;
+    ctx.fillStyle =     "gray";
+    const x =           canvas.width / 4.5;
+    const y =           canvas.height / 2;
     ctx.fillText("GAME OVER", x, y);
 }
 
 function setupGameReset(){
-    if(!hasAddedEventListenerForRestart){
-        hasAddedEventListenerForRestart = true;
+    if(!hAELFR){
+        hAELFR = true;
         setTimeout(()=>{
             window.addEventListener("keyup", reset, {once:true});
             window.addEventListener("touchstart", reset, {once:true});
@@ -142,9 +142,9 @@ function setupGameReset(){
 }
 
 function reset(){
-    hasAddedEventListenerForRestart = false;
-    gameOver = false;
-    waitingToStart = false;
+    hAELFR =            false;
+    gameOver =          false;
+    waitingToStart =    false;
     ground.reset();
     cactiController.reset();
     score.reset();
@@ -152,12 +152,12 @@ function reset(){
 }
 
 function showStartGameText() {
-    const fontSize = 40 * scaleRatio;
-    ctx.font = `${fontSize}px Raleway`;
-    ctx.fillStyle = "gray";
-    const x = canvas.width / 14;
-    const y = canvas.height / 2;
-    ctx.fillText("Tap Screen or Press Space to Start", x, y);
+    const fontSize =    40 * scaleRatio;
+    ctx.font =          `${fontSize}px Raleway`;
+    ctx.fillStyle =     "gray";
+    const x =           canvas.width / 14;
+    const y =           canvas.height / 2;
+    ctx.fillText("Tap Screen (mobile) or Press J to Start", x, y);
 }
 
 function updateGameSpeed(frameTimeDelta){

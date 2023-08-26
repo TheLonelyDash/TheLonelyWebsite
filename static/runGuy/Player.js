@@ -58,13 +58,13 @@ export default class Player{
     }
 
     keydown = (event)=>{
-        if (event.code === "Space"){
+        if (event.code === "KeyJ"){
             this.jumpPressed = true;
         }
     }
 
     keyup = (event)=>{
-        if (event.code === "Space"){
+        if (event.code === "KeyJ"){
             this.jumpPressed = false;
         }
     }
