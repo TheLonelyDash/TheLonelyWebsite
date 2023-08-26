@@ -161,6 +161,15 @@ function showStartGameText() {
     ctx.fillText("Tap Screen (mobile) or Press J to Start", x, y);
 }
 
+function showAgain() {
+    const fontSize =    30 * scaleRatio;
+    ctx.font =          `${fontSize}px Raleway`;
+    ctx.fillStyle =     "gray";
+    const x =           canvas.width / 6;
+    const y =           canvas.height / 1.5;
+    ctx.fillText("Tap Screen (mobile) or Press J to Start", x, y);
+}
+
 function updateGameSpeed(frameTimeDelta){
     gameSpeed += frameTimeDelta * GAME_SPEED_INCREMENT;
 }
@@ -205,6 +214,7 @@ function gameLoop(currentTime){
 
     if (gameOver){
         showGameOver();
+        showAgain();
     }
 
     if(waitingToStart){
