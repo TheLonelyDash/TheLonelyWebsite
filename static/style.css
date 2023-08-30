@@ -118,3 +118,33 @@ a:hover .logo {
     border: 0px solid gray;
     width: 100%;
 }
+
+.testbutton{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: pink;
+    background-color: purple;
+    padding: .5em 1.25em;
+    border-radius: 1rem;
+}
+
+.testbutton:hover,
+.testbutton:focus {
+    background-color: red;
+    color: black;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.embedvideo{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.cardimage{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
