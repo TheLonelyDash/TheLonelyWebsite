@@ -122,8 +122,9 @@ a:hover .logo {
 .testbutton{
     cursor: pointer;
     display: inline-block;
+    align-items: center;
     text-decoration: none;
-    color: pink;
+    color: white!important;
     background-color: purple;
     padding: .5em 1.25em;
     border-radius: 1rem;
