@@ -1,6 +1,6 @@
 import Cactus from "/static/runGuy/Cactus.js";
 
-export default class CactiController{
+export default class itemController{
     ITEM_INTERVAL_MIN = 500;
     ITEM_INTERVAL_MAX = 2000;
 
