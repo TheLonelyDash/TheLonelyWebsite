@@ -27,14 +27,14 @@ export default class Player{
         this.standingStillImage.src = "static/img/IntroGame/standing_still.png";
         this.image = this.standingStillImage;
 
-        const dinoRunImage1 = new Image();
-        dinoRunImage1.src = "static/img/IntroGame/dino_run1.png"
+        const runGuyImage1 = new Image();
+        runGuyImage1.src = "static/img/IntroGame/dino_run1.png"
     
-        const dinoRunImage2 = new Image();
-        dinoRunImage2.src = "static/img/IntroGame/dino_run2.png"
+        const runGuyImage2= new Image();
+        runGuyImage2.src = "static/img/IntroGame/dino_run2.png"
 
-        this.dinoRunImages.push(dinoRunImage1);
-        this.dinoRunImages.push(dinoRunImage2);
+        this.dinoRunImages.push(runGuyImage1);
+        this.dinoRunImages.push(runGuyImage2);
 
         //Keyboard Input
         window.removeEventListener('keydown', this.keydown);
