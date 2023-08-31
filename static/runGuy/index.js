@@ -1,6 +1,6 @@
 import Player from "/static/runGuy/Player.js";
 import Ground from "/static/runGuy/Ground.js";
-import CactiController from "/static/runGuy/CactiController.js";
+import CactiController from "/static/runGuy/itemController.js";
 import Score from "/static/runGuy/Score.js";
 
 

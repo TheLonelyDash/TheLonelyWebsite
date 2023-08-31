@@ -1,10 +1,10 @@
 import Cactus from "/static/runGuy/Cactus.js";
 
 export default class CactiController{
-    CACTUS_INTERVAL_MIN = 500;
-    CACTUS_INTERVAL_MAX = 2000;
+    ITEM_INTERVAL_MIN = 500;
+    ITEM_INTERVAL_MAX = 2000;
 
-    nextCactusInterval = null;
+    nextItemInterval = null;
     cacti = [];
 
     constructor(ctx, cactiImages, scaleRatio, speed){
@@ -19,11 +19,11 @@ export default class CactiController{
 
     setNextCactusTime(){
         const num = this.getRandomNumber(
-            this.CACTUS_INTERVAL_MIN, 
-            this.CACTUS_INTERVAL_MAX
+            this.ITEM_INTERVAL_MIN, 
+            this.ITEM_INTERVAL_MAX
             );
-        this.nextCactusInterval = num;
-        console.log(this.nextCactusInterval);
+        this.nextItemInterval = num;
+        console.log(this.nextItemInterval);
     }
 
     getRandomNumber(min, max){
@@ -47,11 +47,11 @@ export default class CactiController{
     }
 
     update(gameSpeed, frameTimeDelta) {
-        if (this.nextCactusInterval <= 0){
+        if (this.nextItemInterval <= 0){
             this.createCactus();
             this.setNextCactusTime();
         }
-        this.nextCactusInterval -= frameTimeDelta;
+        this.nextItemInterval -= frameTimeDelta;
 
         this.cacti.forEach((cactus) => {
             cactus.update(this.speed, gameSpeed, frameTimeDelta, this.scaleRatio);
