@@ -7,10 +7,10 @@ export default class CactiController{
     nextItemInterval = null;
     items = [];
 
-    constructor(ctx, cactiImages, scaleRatio, speed){
+    constructor(ctx, itemImages, scaleRatio, speed){
         this.ctx = ctx;
         this.canvas = ctx.canvas;
-        this.cactiImages = cactiImages;
+        this.itemImages = itemImages;
         this.scaleRatio = scaleRatio;
         this.speed = speed;
 
@@ -31,17 +31,17 @@ export default class CactiController{
     }
     
     createItem(){
-        const index = this.getRandomNumber(0, this.cactiImages.length - 1);
-        const cactusImage = this.cactiImages[index];
+        const index = this.getRandomNumber(0, this.itemImages.length - 1);
+        const itemImage = this.itemImages[index];
         const x = this.canvas.width * 1.5;
-        const y = this.canvas.height - cactusImage.height;
+        const y = this.canvas.height - itemImage.height;
         const cactus = new Cactus(
             this.ctx, 
             x, 
             y, 
-            cactusImage.width, 
-            cactusImage.height, 
-            cactusImage.image
+            itemImage.width, 
+            itemImage.height, 
+            itemImage.image
             );
         this.items.push(cactus);
     }
