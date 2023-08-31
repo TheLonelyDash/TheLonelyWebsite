@@ -1,6 +1,6 @@
-import Cactus from "/static/runGuy/Cactus.js";
+import Item from "/static/runGuy/item.js";
 
-export default class itemController{
+export default class ItemController{
     ITEM_INTERVAL_MIN = 500;
     ITEM_INTERVAL_MAX = 2000;
 
@@ -35,7 +35,7 @@ export default class itemController{
         const itemImage = this.itemImages[index];
         const x = this.canvas.width * 1.5;
         const y = this.canvas.height - itemImage.height;
-        const cactus = new Cactus(
+        const item = new Item(
             this.ctx, 
             x, 
             y, 
@@ -43,7 +43,7 @@ export default class itemController{
             itemImage.height, 
             itemImage.image
             );
-        this.items.push(cactus);
+        this.items.push(item);
     }
 
     update(gameSpeed, frameTimeDelta) {
@@ -53,17 +53,17 @@ export default class itemController{
         }
         this.nextItemInterval -= frameTimeDelta;
 
-        this.items.forEach((cactus) => {
-            cactus.update(this.speed, gameSpeed, frameTimeDelta, this.scaleRatio);
+        this.items.forEach((item) => {
+            item.update(this.speed, gameSpeed, frameTimeDelta, this.scaleRatio);
         });
     }
 
     draw(){
-        this.items.forEach((cactus) => cactus.draw());
+        this.items.forEach((item) => item.draw());
     }
 
     collideWith(sprite){
-        return this.items.some((cactus) => cactus.collideWith(sprite));
+        return this.items.some((item) => item.collideWith(sprite));
     }
 
     reset(){
