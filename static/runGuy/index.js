@@ -18,18 +18,18 @@ const MAX_JUMP_HEIGHT =             GAME_HEIGHT;    //Long press jump
 const MIN_JUMP_HEIGHT =             150;            //Short press jump
 const GROUND_WIDTH =                2400;           //Ground image width
 const GROUND_HEIGHT =               24;             //Ground image height
-const GROUND_AND_CACTUS_SPEED =     0.5;
+const GROUND_AND_ITEM_SPEED =     0.5;
 
-const CACTI_CONFIG = [
-    {width:48 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/cactus_1.png"},     //Cactus1 width and height
-    {width:98 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/cactus_2.png"},     //Cactus2 width and height
-    {width:48 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/cactus_3.png"}      //Cactus3 width and height
+const ITEM_CONFIG = [
+    {width:48 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/mailbox.png"},     //mailbox width and height
+    {width:98 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/roadclosed.png"},     //roadclosed width and height
+    {width:48 / 1.5, height: 100 / 1.5, image: "/static/img/IntroGame/recycle.png"}      //recycle width and height
 ]
 
 //All GAME OBJECTS
 let player =            null;
 let ground =            null;
-let cactiController =   null;
+let itemController =   null;
 let score =             null;
 
 let scaleRatio =        null;
@@ -61,25 +61,25 @@ function createSprites(){
         ctx, 
         groundWidthInGame, 
         groundHeightInGame, 
-        GROUND_AND_CACTUS_SPEED, 
+        GROUND_AND_ITEM_SPEED, 
         scaleRatio
         );
 
-    const cactiImages =     CACTI_CONFIG.map(cactus =>{
+    const itemImages =     ITEM_CONFIG.map(item =>{
         const image =       new Image();
-        image.src =         cactus.image;
+        image.src =         item.image;
         return {
             image:          image,
-            width:          cactus.width * scaleRatio,
-            height:         cactus.height * scaleRatio,
+            width:          item.width * scaleRatio,
+            height:         item.height * scaleRatio,
         };
     });
 
-    cactiController = new ItemController(
+    itemController = new ItemController(
         ctx, 
-        cactiImages, 
+        itemImages, 
         scaleRatio, 
-        GROUND_AND_CACTUS_SPEED
+        GROUND_AND_ITEM_SPEED
         );
     
     score = new Score(ctx, scaleRatio);
@@ -147,7 +147,7 @@ function reset(){
     gameOver =          false;
     waitingToStart =    false;
     ground.reset();
-    cactiController.reset();
+    itemController.reset();
     score.reset();
     gameSpeed = GAME_SPEED_START;
 }
@@ -194,13 +194,13 @@ function gameLoop(currentTime){
     if (!gameOver && !waitingToStart){
         //Update game objects
         ground.update(gameSpeed, frameTimeDelta);
-        cactiController.update(gameSpeed, frameTimeDelta);
+        itemController.update(gameSpeed, frameTimeDelta);
         player.update(gameSpeed, frameTimeDelta);
         score.update(frameTimeDelta);
         updateGameSpeed(frameTimeDelta);
     }
 
-    if (!gameOver && cactiController.collideWith(player)){
+    if (!gameOver && itemController.collideWith(player)){
         gameOver = true;
         setupGameReset();
         score.setHighScore();
@@ -208,7 +208,7 @@ function gameLoop(currentTime){
 
     //Draw game objects
     ground.draw();
-    cactiController.draw();
+    itemController.draw();
     player.draw();
     score.draw();
 

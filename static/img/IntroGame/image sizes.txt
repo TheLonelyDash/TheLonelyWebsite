@@ -1,5 +1,0 @@
-dinosaur is 88 X 94 px
-ground is 2400 x 24 px
-cactus 1 is 48 x 100
-cactus 2 is 98 x 100
-cactus 3 is 68 x 70

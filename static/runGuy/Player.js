@@ -28,10 +28,10 @@ export default class Player{
         this.image = this.standingStillImage;
 
         const runGuyImage1 = new Image();
-        runGuyImage1.src = "static/img/IntroGame/dino_run1.png"
+        runGuyImage1.src = "static/img/IntroGame/runGuy1.png"
     
         const runGuyImage2= new Image();
-        runGuyImage2.src = "static/img/IntroGame/dino_run2.png"
+        runGuyImage2.src = "static/img/IntroGame/runGuy2.png"
 
         this.dinoRunImages.push(runGuyImage1);
         this.dinoRunImages.push(runGuyImage2);
