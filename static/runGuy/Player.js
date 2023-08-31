@@ -2,7 +2,7 @@ export default class Player{
 
     WALK_ANIMATION_TIMER = 200;
     walkAnimationTimer = this.WALK_ANIMATION_TIMER;
-    dinoRunImages = [];
+    runGuyImages = [];
 
     jumpPressed = false;
     jumpInProgress = false;
@@ -33,8 +33,8 @@ export default class Player{
         const runGuyImage2= new Image();
         runGuyImage2.src = "static/img/IntroGame/runGuy2.png"
 
-        this.dinoRunImages.push(runGuyImage1);
-        this.dinoRunImages.push(runGuyImage2);
+        this.runGuyImages.push(runGuyImage1);
+        this.runGuyImages.push(runGuyImage2);
 
         //Keyboard Input
         window.removeEventListener('keydown', this.keydown);
@@ -104,11 +104,11 @@ export default class Player{
 
     run(gameSpeed, frameTimeDelta){
         if (this.walkAnimationTimer <= 0) {
-            if (this.image === this.dinoRunImages[0]){
-                this.image = this.dinoRunImages[1];
+            if (this.image === this.runGuyImages[0]){
+                this.image = this.runGuyImages[1];
             }
             else {
-                this.image = this.dinoRunImages[0];
+                this.image = this.runGuyImages[0];
             }
             this.walkAnimationTimer = this.WALK_ANIMATION_TIMER;
         }
