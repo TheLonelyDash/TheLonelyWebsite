@@ -125,14 +125,14 @@ a:hover .logo {
     align-items: center;
     text-decoration: none;
     color: white!important;
-    background-color: green;
+    background-color: rgb(255, 65, 65);
     padding: .5em 1.25em;
     border-radius: 1rem;
 }
 
 .testbutton:hover,
 .testbutton:focus {
-    background-color: red;
+    background-color: gray;
     color: black;
 }
 
