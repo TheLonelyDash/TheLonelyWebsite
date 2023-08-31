@@ -5,7 +5,7 @@ export default class CactiController{
     ITEM_INTERVAL_MAX = 2000;
 
     nextItemInterval = null;
-    cacti = [];
+    items = [];
 
     constructor(ctx, cactiImages, scaleRatio, speed){
         this.ctx = ctx;
@@ -14,10 +14,10 @@ export default class CactiController{
         this.scaleRatio = scaleRatio;
         this.speed = speed;
 
-        this.setNextCactusTime();
+        this.setNextItemTime();
     }
 
-    setNextCactusTime(){
+    setNextItemTime(){
         const num = this.getRandomNumber(
             this.ITEM_INTERVAL_MIN, 
             this.ITEM_INTERVAL_MAX
@@ -30,7 +30,7 @@ export default class CactiController{
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
     
-    createCactus(){
+    createItem(){
         const index = this.getRandomNumber(0, this.cactiImages.length - 1);
         const cactusImage = this.cactiImages[index];
         const x = this.canvas.width * 1.5;
@@ -43,30 +43,30 @@ export default class CactiController{
             cactusImage.height, 
             cactusImage.image
             );
-        this.cacti.push(cactus);
+        this.items.push(cactus);
     }
 
     update(gameSpeed, frameTimeDelta) {
         if (this.nextItemInterval <= 0){
-            this.createCactus();
-            this.setNextCactusTime();
+            this.createItem();
+            this.setNextItemTime();
         }
         this.nextItemInterval -= frameTimeDelta;
 
-        this.cacti.forEach((cactus) => {
+        this.items.forEach((cactus) => {
             cactus.update(this.speed, gameSpeed, frameTimeDelta, this.scaleRatio);
         });
     }
 
     draw(){
-        this.cacti.forEach((cactus) => cactus.draw());
+        this.items.forEach((cactus) => cactus.draw());
     }
 
     collideWith(sprite){
-        return this.cacti.some((cactus) => cactus.collideWith(sprite));
+        return this.items.some((cactus) => cactus.collideWith(sprite));
     }
 
     reset(){
-        this.cacti = [];
+        this.items = [];
     }
 }
