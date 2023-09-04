@@ -138,6 +138,11 @@ a:hover .logo {
 
 .card {
     border-radius: 1rem;
+    transition: transform 500ms ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .embedvideo{
@@ -149,3 +154,6 @@ a:hover .logo {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
+
+
+
