@@ -125,7 +125,7 @@ a:hover .logo {
     align-items: center;
     text-decoration: none;
     color: white!important;
-    background-color: rgb(255, 65, 65);
+    background-color: gray;
     padding: .5em 1.25em;
     border-radius: 1rem;
 }
@@ -134,6 +134,8 @@ a:hover .logo {
 .testbutton:focus {
     background-color: gray;
     color: black;
+    transform: scale(1.05);
+    box-shadow: 0 5px 5px black;
 }
 
 .card {
