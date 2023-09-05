@@ -12,7 +12,7 @@ const handleClick = (e) => {
     let userChoice = e.target.innerHTML;
     let computerChoice = choices[Math.floor(Math.random()*choices.length)];
     getResults(userChoice, computerChoice);                     //Pass through players choice and a randomly generated one
-    scoreDisplay.innerHTML = "Win: " + win + "<br>Lose: " + lose + "<br>Tie: " + tie;
+    scoreDisplay.innerHTML = "Wins: " + win + "<br>Loses: " + lose + "<br>Ties: " + tie;
 }
 
 choices.forEach(choice => {
@@ -27,19 +27,19 @@ const getResults = (userChoice, computerChoice) => {
         case 'sp':
         case 'rs':
         case 'pr':
-            resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You win!";
+            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You win!";
             win += 1;
             return "win";
         case 'ps':
         case 'sr':
         case 'rp':
-            resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You lose.";
+            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You lose.";
             lose += 1;
             return "lose";
         case 'ss':
         case 'rr':
         case 'pp':
-            resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You tie. That's sad.";
+            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You tie. That's sad.";
             tie += 1;
             return "tie";
     }
