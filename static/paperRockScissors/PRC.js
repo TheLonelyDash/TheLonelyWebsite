@@ -1,45 +1,51 @@
-const choices = ["rock", "paper", "scissors"];                  //Hold the values of Rock Paper Scissors
+//Create a list of our choices
+const choices = ["ROCK", "PAPER", "SCISSORS"];                  //Hold the values of Rock Paper Scissors
 
+//Display our items
 const resultDisplay = document.querySelector('#result');        //Value for the result (using the id)
 const choicesDisplay = document.querySelector('#choices');      //Value for the choice (using the id)
 const scoreDisplay = document.querySelector('#score');          //Value for the scores (using the id)
 
+//Create our variable to hold our score.
 let win = 0;
 let lose = 0;
 let tie = 0;
 
-const handleClick = (e) => {
-    let userChoice = e.target.innerHTML;
-    let computerChoice = choices[Math.floor(Math.random()*choices.length)];
-    getResults(userChoice, computerChoice);                     //Pass through players choice and a randomly generated one
-    scoreDisplay.innerHTML = "Wins: " + win + "<br>Loses: " + lose + "<br>Ties: " + tie;
+//What do we do with our buttons?
+const handleClick = (element) => {
+    let playersChoice = element.target.innerHTML;                                           //Create a playersChoice variable
+    let compChoice = choices[Math.floor(Math.random()*choices.length)];                     //Create a compChoice variable
+    getResults(playersChoice, compChoice);                                                  //Pass through players choice and a randomly generated one
+    scoreDisplay.innerHTML = "Wins: " + win + "<br>Loses: " + lose + "<br>Ties: " + tie;    //Display the scores
 }
 
+//Create our buttons!
 choices.forEach(choice => {
     const button = document.createElement('button');            //Create a button
-    button.innerHTML = choice;
-    button.addEventListener('click', handleClick);
-    choicesDisplay.appendChild(button);
+    button.innerHTML = choice;                                  //Label our button
+    button.addEventListener('click', handleClick);              //Add an event listener to have the button do something
+    choicesDisplay.appendChild(button);                         //Display what the button should be!
 });
 
-const getResults = (userChoice, computerChoice) => {
-    switch (userChoice[0] + computerChoice[0]) {
+//Create a way to get our results from the inputs
+const getResults = (playersChoice, compChoice) => {
+    switch (playersChoice[0].toLowerCase() + compChoice[0].toLowerCase()) {
         case 'sp':
         case 'rs':
         case 'pr':
-            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You win!";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>YOU WIN!";
             win += 1;
             break;
         case 'ps':
         case 'sr':
         case 'rp':
-            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You lose.";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>You lose.";
             lose += 1;
             break;
         case 'ss':
         case 'rr':
         case 'pp':
-            resultDisplay.innerHTML = "Your Choice: " + userChoice + "<br>Computer's Choice: " + computerChoice + ". <br>You tie. That's sad.";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>You tie.";
             tie += 1;
             break;
     }
