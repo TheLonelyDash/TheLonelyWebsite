@@ -22,29 +22,29 @@ choices.forEach(choice => {
     choicesDisplay.appendChild(button);
 });
 
-
 const getResults = (userChoice, computerChoice) => {
-    switch (userChoice + computerChoice) {
-        case 'scissorspaper':
-        case 'rockscissors':
-        case 'paperrock':
+    switch (userChoice[0] + computerChoice[0]) {
+        case 'sp':
+        case 'rs':
+        case 'pr':
             resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You win!";
             win += 1;
             return "win";
-        case 'papersscissors':
-        case 'scissorsrock':
-        case 'rockpaper':
+        case 'ps':
+        case 'sr':
+        case 'rp':
             resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You lose.";
             lose += 1;
             return "lose";
-        case 'scissorsscissors':
-        case 'rockrock':
-        case 'paperpaper':
+        case 'ss':
+        case 'rr':
+        case 'pp':
             resultDisplay.innerHTML = "You chose " + userChoice + " and the computer chose " + computerChoice + ". You tie. That's sad.";
             tie += 1;
             return "tie";
     }
-}
+};
+
 
 
 
