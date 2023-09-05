@@ -1,0 +1,10 @@
+.choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.result {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
