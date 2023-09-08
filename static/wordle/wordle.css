@@ -3,11 +3,8 @@
 }
 
 .wordleBody {
-    display: flex;
     flex-direction: column;
-    min-height: 100vh;
     margin: 0;
-    padding: 1em;
     font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
@@ -80,6 +77,7 @@
     grid-template-columns: repeat(5, 4em);
     grid-template-rows: repeat(6, 4em);
     gap: .25em;
+    padding-bottom: 1em;
 }
 
 .tile{
