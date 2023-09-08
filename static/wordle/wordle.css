@@ -68,3 +68,51 @@
     width: 1.75em;
     height: 1.75em;
 }
+
+
+
+
+.guess_board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(5, 4em);
+    grid-template-rows: repeat(6, 4em);
+    gap: .25em;
+}
+
+.tile{
+    display: flex;
+    color: black;
+    border: .01em solid hsl(0, 1%, 50%);
+    box-shadow: 4px 2px 2px black;
+    font-size: 3em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.tile[data-state="active"] {
+    border-color: none;
+}
+
+.tile[data-state="incorrect"] {
+    border-color: none;
+    background-color: hsl(200, 1%, 51%);
+    color: white;
+}
+
+.tile[data-state="incorrect_placement"] {
+    border-color: none;
+    background-color: hsl(49, 51%, 47%);
+    color: white;
+}
+
+.tile[data-state="correct"] {
+    border-color: none;
+    background-color: hsl(115, 29%, 43%);
+    color: white;
+}
