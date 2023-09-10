@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="{{url_for('static',filename='/wordle/wordle.css')}}">
 
 <div class="page_title">
-    <h1 class="pagetitle"> Wordle Clone</h1>
+    <h1 class="pagetitle"> Wordle!</h1>
+    <br>
 </div>
 <div class = "wordleBody">
     <div class="alert-container" data-alert-container></div>
@@ -42,7 +43,7 @@
         <div class="tile"></div>
         <div class="tile"></div>
     </div>
-
+    <br>
     <div data-keyboard class="keyboard">
         <button class="key" data-key="Q">Q</button>
         <button class="key" data-key="W">W</button>
@@ -76,6 +77,6 @@
         <button class="key large" data-delete>Delete</button>
     </div>
 </div>
-
+<br>
 <script src="{{url_for('static',filename='/wordle/wordle.js')}}" defer type="module"></script>
 {% endblock %} 
