@@ -168,6 +168,12 @@ function checkWinLose(guess, tiles){
         stopInteraction();
         return;
     }
+
+    const remainingTiles = guessGrid.querySelectorAll(":not([data-letter");
+    if (remainingTiles.length === 0){
+        showAlert("You Lose! The correct word was " + targetWord.toUpperCase(), null);
+        stopInteraction();
+    }
 }
 
 function danceTiles(tiles){
