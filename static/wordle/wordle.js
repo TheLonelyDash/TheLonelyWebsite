@@ -1,10 +1,8 @@
-Start at 26 minutes
-
-
 const targetWords = ["there", "their", "three"];
 const dictionary = ["there", "their", "three"];
+const guessGrid = document.querySelector("[data-guess-grid]");
 
-
+startInteraction();
 
 function startInteraction() {
     document.addEventListener("click", handleMouseClick);
@@ -17,15 +15,15 @@ function stopInteraction() {
 }
 
 function handleMouseClick(e) {
-    if (e.target.matches("[data-key")){
+    if (e.target.matches("[data-key]")){
         pressKey(e.target.dataset.key);
         return;
     }
-    if (e.target.matches("[data-enter")){
+    if (e.target.matches("[data-enter]")){
         submitGuess();
         return;
     }
-    if (e.target.matches("[data-delete")){
+    if (e.target.matches("[data-delete]")){
         deleteKey();
         return;
     }
@@ -47,5 +45,8 @@ function handleKeyPress(e){
 }
 
 function pressKey(key) {
-
+    const nextTile = guessGrid.querySelector(":not([data-letter])");
+    nextTile.dataset.letter = key.toLowerCase();
+    nextTile.textContent = key;
+    nextTile.dataset.state = "active";
 }
