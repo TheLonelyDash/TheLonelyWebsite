@@ -61,12 +61,6 @@
     grid-column: span 3;
 }
 
-.key > svg {
-    width: 1.75em;
-    height: 1.75em;
-}
-
-
 
 
 .guess_board {
@@ -91,6 +85,61 @@
     align-items: center;
     text-transform: uppercase;
     user-select: none;
+    transition: transform 250ms linear;
+}
+
+.tile.flip{
+    transform: rotateX(90deg);
+}
+
+.tile.shake {
+    animation: shake 250ms ease-in-out;
+}
+
+.tile.dance {
+    animation: dance 500ms ease-in-out;
+}
+
+@keyframes shake {
+    10% {
+        transform: translateX(-3%);
+    }
+    30% {
+        transform: translateX(3%);
+    }
+    50% {
+        transform: translate(-5%)
+    }
+    75%{
+        transform: translateX(5%)
+    }
+    90%{
+        transform: translateX(3%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes dance {
+    20%{
+        transform: translateY(-50%)
+    }
+    40%{
+        transform: translateY(5%)
+    }
+    60%{
+        transform: translateY(-25%)
+    }
+    80%{
+        transform: translateY(2.5%)
+    }
+    90%{
+        transform: translateY(-5%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
 }
 
 .tile[data-state="active"] {
@@ -113,4 +162,33 @@
     border-color: none;
     background-color: hsl(115, 29%, 43%);
     color: white;
+}
+
+.alert-container{
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translate(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert {
+    pointer-events: none;
+    background-color: hsl(73, 100%, 65%);
+    padding: .75em;
+    border-radius: .5em;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    margin-bottom: .5em;
+}
+
+.alert:last-child {
+    margin-bottom: 0;;
+}
+
+.alert.hide {
+    opacity: 0;
 }
