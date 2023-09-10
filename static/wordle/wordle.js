@@ -2328,8 +2328,6 @@ const FLIP_ANIMATION_DURATION = 500;
 const DANCE_ANIMATION_DURATION = 500;
 const keyboard = document.querySelector("[data-keyboard]");
 
-
-
 startInteraction();
 
 function startInteraction() {
@@ -2338,8 +2336,8 @@ function startInteraction() {
 }
 
 function stopInteraction() {
-    document.removeEventListener("click", handleMouseClick);
-    document.removeEventListener("keydown", handleKeyPress);
+    //document.removeEventListener("click", handleMouseClick);
+    //document.removeEventListener("keydown", handleKeyPress);
 }
 
 function handleMouseClick(e) {
@@ -2481,6 +2479,7 @@ function checkWinLose(guess, tiles){
     if (guess == targetWord){
         showAlert("You Guessed it!  You WON!", 5000);
         danceTiles(tiles);
+        playAgain();
         stopInteraction();
         return;
     }
@@ -2488,16 +2487,19 @@ function checkWinLose(guess, tiles){
     const remainingTiles = guessGrid.querySelectorAll(":not([data-letter");
     if (remainingTiles.length === 0){
         showAlert("You Lose! The correct word was " + targetWord.toUpperCase(), null);
+        playAgain();
         stopInteraction();
-    }
-
-    playAgain();
+    } 
 }
 
 function playAgain(){
-    
+    document.addEventListener("click", restartPage);
+    document.addEventListener("keydown", restartPage);
 }
 
+function restartPage(){
+    location.reload();
+}
 
 function danceTiles(tiles){
     tiles.forEach((tile, index) => {
