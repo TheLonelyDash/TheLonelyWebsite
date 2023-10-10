@@ -5,9 +5,9 @@ number,name,link,language,embed
 2,Add Two Numbers,https://youtu.be/m5iTsmziXts,JavaScript,https://www.youtube.com/embed/m5iTsmziXts
 2,Add Two Numbers,https://youtu.be/Ijl0eVDszKQ,Java,https://www.youtube.com/embed/Ijl0eVDszKQ
 2,Add Two Numbers,https://youtu.be/n4Wd5UmkaxA,Python,https://www.youtube.com/embed/n4Wd5UmkaxA
-3,Longest Substring Without Repeating Character,https://youtu.be/ePFmPuBgMoo,Python,https://www.youtube.com/embed/ePFmPuBgMoo?si=bL8uXhjW8P4vlzNk
-3,Longest Substring Without Repeating Character,https://youtu.be/wqDE8x-IUOo,Java,https://www.youtube.com/embed/wqDE8x-IUOo?si=HygDinls60bRxDEP
-3,Longest Substring Without Repeating Character,https://youtu.be/PP2YYab5RhQ,JavaScript,https://www.youtube.com/embed/PP2YYab5RhQ?si=OQEFiPSzOGlCuwha
+3,Longest Substring Without Repeating Character,https://youtu.be/ePFmPuBgMoo,Python,https://www.youtube.com/embed/ePFmPuBgMoo
+3,Longest Substring Without Repeating Character,https://youtu.be/wqDE8x-IUOo,Java,https://www.youtube.com/embed/wqDE8x-IUOo
+3,Longest Substring Without Repeating Character,https://youtu.be/PP2YYab5RhQ,JavaScript,https://www.youtube.com/embed/PP2YYab5RhQ
 5,Longest Palindromic Substring,https://youtu.be/9JFeEif9Dyo,JavaScript,https://www.youtube.com/embed/9JFeEif9Dyo
 5,Longest Palindromic Substring,https://youtu.be/vBVyabv3wTc,Java,https://www.youtube.com/embed/vBVyabv3wTc
 5,Longest Palindromic Substring,https://youtu.be/z9yT2Cc3naA,Python,https://www.youtube.com/embed/z9yT2Cc3naA
@@ -115,6 +115,9 @@ number,name,link,language,embed
 217,Contains Duplicate,https://youtu.be/wTXfrW44cKU,Python,https://www.youtube.com/embed/wTXfrW44cKU
 225,Implement Stack Using Queues,https://youtu.be/YTLOBPpxeNo,Java,https://www.youtube.com/embed/YTLOBPpxeNo
 225,Implement Stack Using Queues,https://youtu.be/wWfNdIHSvpw,Python,https://www.youtube.com/embed/wWfNdIHSvpw
+231,Power of Two,https://youtu.be/Sg0QlOdRkiA,Python,https://www.youtube.com/embed/Sg0QlOdRkiA
+231,Power of Two,https://youtu.be/FD2B1dk0n6s,JavaScript,https://www.youtube.com/embed/FD2B1dk0n6s
+231,Power of Two,https://youtu.be/tHcNz4t-Q6Q,Java,https://www.youtube.com/embed/tHcNz4t-Q6Q
 382,Linked List Random Node,https://youtu.be/YNPId6_adEk,JavaScript,https://www.youtube.com/embed/YNPId6_adEk
 382,Linked List Random Node,https://youtu.be/JJYkQU850Io,Java,https://www.youtube.com/embed/JJYkQU850Io
 382,Linked List Random Node,https://youtu.be/AAqqMRWFX1Q,Python,https://www.youtube.com/embed/AAqqMRWFX1Q
