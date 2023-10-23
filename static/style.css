@@ -10,6 +10,7 @@
 
 .page_title {
     text-align: center;
+    animation: transitionIn 2s;
 }
 
 .colour1 {
@@ -73,8 +74,9 @@ a:hover .logo {
 }
 
 .center_box {
-    padding: 20px;
-    text-align: right;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .hamburger {
@@ -141,6 +143,7 @@ a:hover .logo {
 .card {
     border-radius: 1rem;
     transition: transform 500ms ease;
+    animation: transitionIn 1s;
 }
 
 .card:hover{
@@ -159,10 +162,33 @@ a:hover .logo {
 }
 
 .homeparagraph {
-    margin-top: 5%; 
-    margin-bottom: 5%; 
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%; 
+    margin-bottom: 10%; 
     text-align: center;
 }
 
+.frontParagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10%;
+}
 
+.signature {
+    opacity: 80%;
+    font-size: 75%;
+}
 
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+    to {
+        opacity: 1;
+        transform: rotateX('0');
+    }
+}
