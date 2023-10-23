@@ -74,7 +74,7 @@ a:hover .logo {
 
 .center_box {
     padding: 20px;
-    text-align: center;
+    text-align: right;
 }
 
 .hamburger {
@@ -156,6 +156,12 @@ a:hover .logo {
 .cardimage{
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+}
+
+.homeparagraph {
+    margin-top: 5%; 
+    margin-bottom: 5%; 
+    text-align: center;
 }
 
 
