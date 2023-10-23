@@ -3,6 +3,8 @@
 {% block title %}Rock, Paper, Scissors{% endblock %}
 
 {% block body %}
+<div class="all">
+
 <link rel="stylesheet" href="{{url_for('static',filename='/paperRockScissors/style.css')}}">
 
 <br>
@@ -22,4 +24,6 @@
 </div>
 
 <script src="{{url_for('static',filename='/paperRockScissors/PRC.js')}}" defer type="module"></script>
+
+</div>
 {% endblock %} 

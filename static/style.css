@@ -165,8 +165,16 @@ a:hover .logo {
     margin-top: 0%;
     margin-left: 5%;
     margin-right: 5%; 
-    margin-bottom: 10%; 
+    margin-bottom: 0%; 
     text-align: center;
+    background-color: rgb(195, 170, 140);
+    border-radius: 1rem;
+}
+
+.hometext {
+    padding: 4%;
+    font-weight: 500;
+    font-size: 100%;
 }
 
 .frontParagraph {
@@ -180,6 +188,10 @@ a:hover .logo {
 .signature {
     opacity: 80%;
     font-size: 75%;
+}
+
+.all {
+    animation: transitionIn 2s;
 }
 
 @keyframes transitionIn {

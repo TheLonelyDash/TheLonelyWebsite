@@ -2,6 +2,9 @@
 {% block title %}Run Guy Game{% endblock %}
 
 {% block body %}
+<div class="all">
+
+
 
 <div class="gamebox">
     <canvas id="game" class="games">
@@ -10,4 +13,6 @@
     
 </div>
 <script src="{{url_for('static',filename='/runGuy/index.js')}}" defer type="module"></script>
+
+</div>
 {% endblock %} 

@@ -3,6 +3,11 @@
 {% block title %}Wordle Clone{% endblock %}
 
 {% block body %}
+
+<div class="all">
+
+
+
 <link rel="stylesheet" href="{{url_for('static',filename='/wordle/wordle.css')}}">
 
 <div class="page_title">
@@ -80,4 +85,6 @@
 </div>
 <br>
 <script src="{{url_for('static',filename='/wordle/wordle.js')}}" defer type="module"></script>
+
+</div>
 {% endblock %} 
