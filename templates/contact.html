@@ -54,15 +54,30 @@
         var message = document.getElementById('message').value;
         var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject: ' + subject + '<br/> message: ' + message;
 
-        Email.send({
-            SecureToken : "d3863367-57d0-4eb6-ab66-97333088e2e6",
-            To : 'shortt.c@proton.me',
-            From : "shortt.c@gmail.com",
-            Subject : "contact message",
-            Body : body
-        }).then(
-            message => alert(message)
-        );
+        if (name == ""){
+            alert("Hey! Make sure the name section is filled in! We like to know who we're talking to...");
+        }
+        else if (email == ""){
+            alert("Hey! Please include an email, otherwise we can't respond!");
+        }
+        else if (message == ""){
+            alert("Ummm...did you mean to send a blank message?  We'll give you another chance to fill it out...");
+        }
+        else {
+            Email.send({
+                SecureToken : "d3863367-57d0-4eb6-ab66-97333088e2e6",
+                To : 'shortt.c@proton.me',
+                From : "shortt.c@gmail.com",
+                Subject : "contact message",
+                Body : body
+            }).then(
+                message => alert(message)
+            );
+            document.getElementById('name').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('subject').value = "";
+            document.getElementById('message').value = "";
+        }
     })
 </script>
 
