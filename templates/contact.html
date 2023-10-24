@@ -15,20 +15,25 @@
                     <i class="fa fa-caret-left"></i>
                     <form>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <label for="exampleFormControlInput1" class="form-label" >Your Name</label>
+                            <input id="name" type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Last">
                         </div>
                         
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email Address</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <input id="email" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Subject</label>
+                            <input id="subject" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
                         </div>
                         
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1" class="form-label" >Your Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="btn">Submit</button>
                       </form>
                 </div>
             </div>
@@ -38,6 +43,27 @@
 </div>
 
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(e){
+        e.preventDefault()
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        var body = 'name: ' + name + '<br/> email: ' + email + '<br/> subject: ' + subject + '<br/> message: ' + message;
 
+        Email.send({
+            SecureToken : "d3863367-57d0-4eb6-ab66-97333088e2e6",
+            To : 'shortt.c@proton.me',
+            From : "shortt.c@gmail.com",
+            Subject : "contact message",
+            Body : body
+        }).then(
+            message => alert(message)
+        );
+    })
+</script>
 
 {% endblock %} 
