@@ -185,7 +185,8 @@ a:hover .logo {
 
 .signature {
     opacity: 80%;
-    font-size: 75%;
+    font-size: 65%;
+    padding: 5%;
 }
 
 .all {
@@ -203,7 +204,7 @@ a:hover .logo {
 }
 
 .left {
-    background:rgb(7, 37, 202, 0.75);
+    background:rgba(107, 77, 42, 0.75);
     padding: 200px 98px;
     border-radius: 1rem;
 }
