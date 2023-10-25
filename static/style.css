@@ -59,24 +59,21 @@ a:hover .logo {
 }
 
 .bg_green{
-    background: rgb(176, 202, 252);
+    background: rgb(220, 95, 95);
     color: white;
+    text-align: center;
 }
 
 .bg_pink{
-    background: #d6f3e1;
-    color: black;
+    background: rgb(155, 195, 215);
+    color: white;
+    text-align: center;
 }
 
 .bg_grey{
-    background: rgb(177, 176, 176);
+    background: rgb(173, 149, 127);
     color: white;
-}
-
-.center_box {
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    text-align: center;
 }
 
 .hamburger {
@@ -169,6 +166,7 @@ a:hover .logo {
     text-align: center;
     background-color: rgb(195, 170, 140);
     border-radius: 1rem;
+    border-bottom: 1px solid rgb(32, 32, 32);
 }
 
 .hometext {

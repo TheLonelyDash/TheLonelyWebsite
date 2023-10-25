@@ -36,52 +36,46 @@
                 <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url_for('about') }}">TheLonelyDash</a></li>  
-                        <li><a class="dropdown-item" href="{{ url_for('abouttopher') }}">Topher</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('home') }}">No Idea</a></li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('about') }}">TheLonelyDash</a></li>  
+                            <li><a class="dropdown-item" href="{{ url_for('abouttopher') }}">Topher</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('home') }}">No Idea</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Games
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('wordle') }}">Worlds Hardest Wordle</a></li>  
+                            <li><a class="dropdown-item" href="{{ url_for('paperrockscissors') }}">Rock, Paper, Scissors</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('runguy') }}">Run Guy Game</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tutorials
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('pythonleetcode') }}">LeetCode - Python</a></li>  
+                            <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">LeetCode - Java</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">LeetCode - JavaScript</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('miniprojects') }}">Mini-Projects</a></li>
+                            </ul>
+                        </li>
                         </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Games
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url_for('wordle') }}">Worlds Hardest Wordle</a></li>  
-                        <li><a class="dropdown-item" href="{{ url_for('paperrockscissors') }}">Rock, Paper, Scissors</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('runguy') }}">Run Guy Game</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Tutorials
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url_for('pythonleetcode') }}">LeetCode - Python</a></li>  
-                        <li><a class="dropdown-item" href="{{ url_for('javaleetcode') }}">LeetCode - Java</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('javascriptleetcode') }}">LeetCode - JavaScript</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ url_for('miniprojects') }}">Mini-Projects</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="{{ url_for('apps') }}">Apps</a>
-                    </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -97,20 +91,29 @@
 
 <!------------------------------------------------------------------  This is the Footer    ----------------------------------------------------------------->
 
-        <footer class="footer">
-            <div class="social text-center">
-                <div>
-                    <a href="{{ url_for('facebook') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/FacebookLogo.png')}}" class="logo hover" width="30"/></a>
-                    <a href="{{ url_for('github') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/GitHubLogo.png')}}" class="logo" width="30"/></a>
-                    <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/YouTubeLogo.png')}}" class="logo" width="30"/></a>
-                    <a href="{{ url_for('linkedin') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/LinkedInLogo.png')}}" class="logo" width="30"/></a>
+        <footer class="footer" style="border-top: solid 1px black; margin-top: 5%;">
+            <div class="">
+                <div class="row">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <a href="{{ url_for('facebook') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/FacebookLogo.png')}}" class="logo hover" width="30"/></a>
+                        <a href="{{ url_for('linkedin') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/LinkedInLogo.png')}}" class="logo" width="30"/></a>
+                        <a href="{{ url_for('youtube') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/YouTubeLogo.png')}}" class="logo" width="30"/></a>
+                        <a href="{{ url_for('github') }}" target="_blank"><img src="{{url_for('static', filename='img/Logos/GitHubLogo.png')}}" class="logo" width="30"/></a>
+                    </div>    
+                    <div class="col-sm-4" style="margin: auto; text-align: center;">
+                            <li class="list-inline-item"><a href="{{ url_for('terms') }}" target="_blank">Terms</a></li>
+                            <li class="list-inline-item"><a href="{{ url_for('privacypolicy') }}" target="_blank"> Privacy Policy</a></li>
+                    </div>  
+                    <div class="col-sm-4" style="margin: auto; text-align: center;">
+                        <a href="{{ url_for('privacypolicy') }}" target="_blank">Frequently Asked Questions</a>
+                    </div>  
                 </div>
-            <ul class="list-inline text-center  colour1">
-                <li class="list-inline-item"><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li class="list-inline-item"><a href="{{ url_for('terms') }}" target="_blank">Terms</a></li>
-                <li class="list-inline-item"><a href="{{ url_for('privacypolicy') }}" target="_blank"> Privacy Policy</a></li>
-            </ul>
-            <p class="copyright text-center mainLogo" style="font-size: 12px;">TheLonelyDash © 2023 - All Rights Reserved</p>
+            </div>
+
+                <div style="border-bottom: solid 1px black;">
+
+                </div>
+            <p class="text-center mainLogo" style="font-size: 12px;">TheLonelyDash © 2023 - All Rights Reserved</p>
         </footer>
 
     <!--Bootstrap 5 JavaScript -->
