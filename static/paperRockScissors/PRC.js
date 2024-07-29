@@ -33,19 +33,19 @@ const getResults = (playersChoice, compChoice) => {
         case 'sp':
         case 'rs':
         case 'pr':
-            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>YOU WIN!";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br><br>YOU WIN!" + "<br><br>Play again?";
             win += 1;
             break;
         case 'ps':
         case 'sr':
         case 'rp':
-            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>You lose.";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br><br>You lose." + "<br><br>Play again?";
             lose += 1;
             break;
         case 'ss':
         case 'rr':
         case 'pp':
-            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br>You tie.";
+            resultDisplay.innerHTML = "Your Choice: " + playersChoice + "<br>Computer's Choice: " + compChoice + ". <br><br>You tie." + "<br><br>Play again?";
             tie += 1;
             break;
     }

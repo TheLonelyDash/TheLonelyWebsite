@@ -1,0 +1,195 @@
+*,*::after, *::before {
+    Box-sizing: border-box;
+}
+
+.buttonBody {
+    flex-direction: column;
+    margin: 0;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+}
+
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(20, minmax(auto, 1.25em));
+    grid-auto-rows: 3em;
+    gap: .25em;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.key{
+    grid-column: span 2;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(
+        var(--hue,200), 
+        var(--saturation, 1%), 
+        calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
+        );
+    font-size: inherit;
+    border: none;
+    padding: 0;
+    color: white;
+    fill: white;
+    text-transform: uppercase;
+    border-radius: .5em;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 4px 2px 2px black;
+}
+
+.key:hover, .key:focus {
+    --lightness-offset: 5%;
+}
+
+.key.incorrect{
+    --lightness: 23%;
+}
+
+.key.incorrect_placement{
+    --hue: 49;
+    --saturation: 51%;
+    --lightness: 47%;
+}
+
+.key.correct{
+    --hue: 115;
+    --saturation: 29%;
+    --lightness: 43%;
+}
+
+.key.large{
+    grid-column: span 4;
+}
+
+
+
+.guess_board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(5, 4em);
+    grid-template-rows: repeat(6, 4em);
+    gap: .25em;
+    padding-bottom: 1em;
+}
+
+.tile{
+    display: flex;
+    color: black;
+    border: .01em solid hsl(0, 1%, 50%);
+    box-shadow: 4px 2px 2px black;
+    font-size: 3em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    user-select: none;
+    transition: transform 250ms linear;
+}
+
+.tile.flip{
+    transform: rotateX(90deg);
+}
+
+.tile.shake {
+    animation: shake 250ms ease-in-out;
+}
+
+.tile.dance {
+    animation: dance 500ms ease-in-out;
+}
+
+@keyframes shake {
+    10% {
+        transform: translateX(-3%);
+    }
+    30% {
+        transform: translateX(3%);
+    }
+    50% {
+        transform: translate(-5%)
+    }
+    75%{
+        transform: translateX(5%)
+    }
+    90%{
+        transform: translateX(3%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes dance {
+    20%{
+        transform: translateY(-50%)
+    }
+    40%{
+        transform: translateY(5%)
+    }
+    60%{
+        transform: translateY(-25%)
+    }
+    80%{
+        transform: translateY(2.5%)
+    }
+    90%{
+        transform: translateY(-5%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+.tile[data-state="active"] {
+    border-color: none;
+}
+
+.tile[data-state="incorrect"] {
+    border-color: none;
+    background-color: hsl(200, 1%, 51%);
+    color: white;
+}
+
+.tile[data-state="incorrect_placement"] {
+    border-color: none;
+    background-color: hsl(49, 51%, 47%);
+    color: white;
+}
+
+.tile[data-state="correct"] {
+    border-color: none;
+    background-color: hsl(115, 29%, 43%);
+    color: white;
+}
+
+.alert-container{
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translate(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert {
+    pointer-events: none;
+    background-color: hsl(73, 100%, 65%);
+    padding: .75em;
+    border-radius: .5em;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    margin-bottom: .5em;
+}
+
+.alert:last-child {
+    margin-bottom: 0;;
+}
+
+.alert.hide {
+    opacity: 0;
+}

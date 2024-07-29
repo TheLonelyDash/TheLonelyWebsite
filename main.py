@@ -79,7 +79,9 @@ def privacypolicy():
     return render_template("privacypolicy.html")
 
 
-
+@app.route("/intervals")
+def intervals():
+    return render_template("intervals.html")
 
 
 ####################### External Links ######################
