@@ -1,9 +1,10 @@
-*,*::after, *::before {
-    Box-sizing: border-box;
-}
-
 .audiobody{
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: 2em;
+}
+
+.row{
+    justify-content: center;
 }
