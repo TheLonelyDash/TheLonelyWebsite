@@ -91,3 +91,7 @@
     grid-column: span 3;
 }
 
+.textArea {
+    width: 100px;
+    height: 30px;
+}
