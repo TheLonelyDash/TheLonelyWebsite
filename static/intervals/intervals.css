@@ -2,6 +2,12 @@
     Box-sizing: border-box;
 }
 
+.audiobody{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .buttonBody {
     flex-direction: column;
     align-items: center;
