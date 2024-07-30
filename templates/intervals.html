@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" href="{{url_for('static',filename='/intervals/intervals.css')}}">
 
+
 <div class="page_title">
     <br>
     <h1 class="pagetitle"> Intervals!</h1>
@@ -20,11 +21,10 @@
 
 <!--    This is the audio controller to play the Tones    -->
 <div class = "audiobody">
-    <button type="button" class="btn btn-primary btn-sm" id="t1b">Tone 1</button>
-    <button type="button" class="btn btn-primary btn-lg" id="ttb">Play together</button>
-    <button type="button" class="btn btn-primary btn-sm" id="t2b">Tone 2</button>
+    <button type="button" class="btn btn-primary btn-sm" id="t1b" onclick="playT1()">Tone 1</button>
+    <button type="button" class="btn btn-primary btn-lg" id="ttb" onclick="playTt()">Play together</button>
+    <button type="button" class="btn btn-primary btn-sm" id="t2b" onclick="playT2()">Tone 2</button>
 </div>
-
 
 <div class="container">
     <div class="row">
@@ -101,7 +101,34 @@
     </div>
 </div>
 
-<script src="{{url_for('static',filename='/intervals/intervals.js')}}" defer type="module"></script>
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+<script>
+var T1 = new Audio('static/audio/tone1.mp3')
+var T2 = new Audio('static/audio/tone2.mp3')
+
+function playT1() {
+    T1.play();
+}
+
+function playTt() {
+    T1.play();
+    T2.play();
+}
+
+function playT2() {
+    T2.play();
+}
+</script>
+
+
 
 </div>
 
