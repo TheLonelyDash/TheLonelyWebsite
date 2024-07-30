@@ -20,14 +20,9 @@
 
 <!--    This is the audio controller to play the Tones    -->
 <div class = "audiobody">
-    <audio controls>
-        <source src="/static/audio/tone1.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    <audio controls>
-        <source src="/static/audio/tone2.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+    <button type="button" class="btn btn-primary btn-sm" id="t1b">Tone 1</button>
+    <button type="button" class="btn btn-primary btn-lg" id="ttb">Play together</button>
+    <button type="button" class="btn btn-primary btn-sm" id="t2b">Tone 2</button>
 </div>
 
 
@@ -106,18 +101,9 @@
     </div>
 </div>
 
-
-<audio id="myAudio">
-    <source src="/static/audio/tone1.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  
-  <p>Click the buttons to play or pause the audio.</p>
-  
-  <button onclick="playAudio()" type="button">Play Audio</button>
-  <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+<script src="{{url_for('static',filename='/intervals/intervals.js')}}" defer type="module"></script>
 
 </div>
-<script src="{{url_for('static',filename='/intervals/intervals.js')}}" defer type="module"></script>
+
 {% endblock %} 
 
