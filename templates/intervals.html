@@ -30,6 +30,7 @@
     </audio>
 </div>
 
+
 <div class="container">
     <div class="row">
         <div class="col-6 col-sm-3">
@@ -105,5 +106,18 @@
     </div>
 </div>
 
+
+<audio id="myAudio">
+    <source src="/static/audio/tone1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <p>Click the buttons to play or pause the audio.</p>
+  
+  <button onclick="playAudio()" type="button">Play Audio</button>
+  <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+
+</div>
 <script src="{{url_for('static',filename='/intervals/intervals.js')}}" defer type="module"></script>
 {% endblock %} 
+
