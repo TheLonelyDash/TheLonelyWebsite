@@ -8,3 +8,7 @@
 .row{
     justify-content: center;
 }
+
+.btnSize{
+    width: 100%;
+}
