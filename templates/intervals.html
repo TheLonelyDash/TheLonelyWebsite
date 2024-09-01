@@ -160,14 +160,45 @@ function newInterval() {
 
 
 function guess() {
-    if (tone1 == tone2) {
+    var distance = Math.abs(tone1 - tone2);
+    if (distance == 0) {
         resultDisplay.innerHTML = "They are the Same";
     }
-    if (tone1 > tone2) {
-        resultDisplay.innerHTML = "T1 > T2";
+    if (distance == 1) {
+        resultDisplay.innerHTML = "They are a half step";
     }
-    if (tone1 < tone2) {
-        resultDisplay.innerHTML = "T2 > T1";
+    if (distance == 2) {
+        resultDisplay.innerHTML = "They are a whole step";
+    }
+    if (distance == 3) {
+        resultDisplay.innerHTML = "They are a minor third";
+    }
+    if (distance == 4) {
+        resultDisplay.innerHTML = "They are a major third";
+    }
+    if (distance == 5) {
+        resultDisplay.innerHTML = "They are a perfect 4th";
+    }
+    if (distance == 6) {
+        resultDisplay.innerHTML = "They are a tritone";
+    }
+    if (distance == 7) {
+        resultDisplay.innerHTML = "They are a perfect 5th";
+    }
+    if (distance == 8) {
+        resultDisplay.innerHTML = "They are a minor 6th";
+    }
+    if (distance == 9) {
+        resultDisplay.innerHTML = "They are a major 6th";
+    }
+    if (distance == 10) {
+        resultDisplay.innerHTML = "They are a minor 7th";
+    }
+    if (distance == 11) {
+        resultDisplay.innerHTML = "They are a major 7th";
+    }
+    if (distance == 12){
+        resultDisplay.innerHTML = "They are an octive apart";
     }
 }
 
