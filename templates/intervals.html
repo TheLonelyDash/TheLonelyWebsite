@@ -90,6 +90,11 @@
 
 <br>
 
+<div id = "PRC">
+    <h3 id = "result" class = "result"></h3>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="col-6 col-sm-3">
@@ -112,19 +117,19 @@
 <!-- JAVASCRIPT -->
 <script>
 const tones = [
-    'static/audio/1.mp3',
-    'static/audio/2.mp3',
-    'static/audio/3.mp3',
-    'static/audio/4.mp3',
-    'static/audio/5.mp3',
-    'static/audio/6.mp3',
-    'static/audio/7.mp3',
-    'static/audio/8.mp3',
-    'static/audio/9.mp3',
-    'static/audio/10.mp3',
-    'static/audio/11.mp3',
-    'static/audio/12.mp3',
-    'static/audio/13.mp3'
+    'static/audio/C4.mp3',
+    'static/audio/Db4.mp3',
+    'static/audio/D4.mp3',
+    'static/audio/Eb4.mp3',
+    'static/audio/E4.mp3',
+    'static/audio/F4.mp3',
+    'static/audio/Gb4.mp3',
+    'static/audio/G4.mp3',
+    'static/audio/Ab4.mp3',
+    'static/audio/A4.mp3',
+    'static/audio/Bb4.mp3',
+    'static/audio/B4.mp3',
+    'static/audio/C5.mp3'
 ]
 
 var tone1 = Math.floor(Math.random()*12);
@@ -132,6 +137,8 @@ var tone2 = Math.floor(Math.random()*12);
 
 var T1 = new Audio(tones[tone1])
 var T2 = new Audio(tones[tone2])
+
+const resultDisplay = document.querySelector('#result');        //Value for the result (using the id)
 
 function playT1() {
     T1.play();
@@ -151,8 +158,17 @@ function newInterval() {
     window.location.reload();
 }
 
+
 function guess() {
-    
+    if (tone1 == tone2) {
+        resultDisplay.innerHTML = "They are the Same";
+    }
+    if (tone1 > tone2) {
+        resultDisplay.innerHTML = "T1 > T2";
+    }
+    if (tone1 < tone2) {
+        resultDisplay.innerHTML = "T2 > T1";
+    }
 }
 
 </script>
