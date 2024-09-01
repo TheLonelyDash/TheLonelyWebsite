@@ -22,7 +22,7 @@
 <!--    This is the audio controller to play the Tones    -->
 <div class = "audiobody">
     <button type="button" class="btn btn-primary btn-sm" id="t1b" onclick="playT1()">Tone 1</button>
-    <button type="button" class="btn btn-primary btn-lg" id="ttb" onclick="playTt()">Play together</button>
+    <button type="button" class="btn btn-primary btn-lg" id="ttb" onclick="playTt()">Play Together</button>
     <button type="button" class="btn btn-primary btn-sm" id="t2b" onclick="playT2()">Tone 2</button>
 </div>
 
@@ -160,45 +160,127 @@ function newInterval() {
 
 
 function guess() {
-    var distance = Math.abs(tone1 - tone2);
-    if (distance == 0) {
-        resultDisplay.innerHTML = "They are the Same";
+    var distance = Math.abs(tone1-tone2);
+
+    if (distance == 0){
+        var tSwitch = document.getElementById("sameTone");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are the same note!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
+
     if (distance == 1) {
-        resultDisplay.innerHTML = "They are a half step";
+        var tSwitch = document.getElementById("halfStep");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a half step apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 2) {
-        resultDisplay.innerHTML = "They are a whole step";
+        var tSwitch = document.getElementById("wholeStep");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a whole step apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 3) {
-        resultDisplay.innerHTML = "They are a minor third";
+        var tSwitch = document.getElementById("m3");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a minor third apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 4) {
-        resultDisplay.innerHTML = "They are a major third";
+        var tSwitch = document.getElementById("M3");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a major 3rd apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
+
+
     if (distance == 5) {
-        resultDisplay.innerHTML = "They are a perfect 4th";
+        var tSwitch = document.getElementById("p4");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a perfect 4th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 6) {
-        resultDisplay.innerHTML = "They are a tritone";
+        var tSwitch = document.getElementById("tt");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a tritone apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 7) {
-        resultDisplay.innerHTML = "They are a perfect 5th";
+        var tSwitch = document.getElementById("p5");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a perfect 5th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 8) {
-        resultDisplay.innerHTML = "They are a minor 6th";
+        var tSwitch = document.getElementById("m6");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a minor 6th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 9) {
-        resultDisplay.innerHTML = "They are a major 6th";
+        var tSwitch = document.getElementById("M6");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a major 6th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 10) {
-        resultDisplay.innerHTML = "They are a minor 7th";
+        var tSwitch = document.getElementById("m7");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a minor 7th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 11) {
-        resultDisplay.innerHTML = "They are a major 7th";
+        var tSwitch = document.getElementById("sameTone");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are a major 7th apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
     if (distance == 12){
-        resultDisplay.innerHTML = "They are an octive apart";
+        var tSwitch = document.getElementById("sameTone");
+        if (tSwitch.checked){
+            resultDisplay.innerHTML = "Correct! They are an octive apart!";
+        }
+        else {
+            resultDisplay.innerHTML = "Try again."
+        }
     }
 }
 
