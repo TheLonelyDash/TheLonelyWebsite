@@ -21,20 +21,23 @@
 
 <!--    This is the audio controller to play the Tones    -->
 <div class = "audiobody">
-    <button type="button" class="btn btn-primary btn-sm" id="t1b" onclick="playT1()">Tone 1</button>
+    <button type="button" class="btn btn-secondary btn-sm" id="t1b" onclick="playT1()">Tone 1</button>
     <button type="button" class="btn btn-primary btn-lg" id="ttb" onclick="playTt()">Play Together</button>
-    <button type="button" class="btn btn-primary btn-sm" id="t2b" onclick="playT2()">Tone 2</button>
+    <button type="button" class="btn btn-secondary btn-sm" id="t2b" onclick="playT2()">Tone 2</button>
 </div>
 
 <div class="container">
+    <div class="res">
+        <h5>Please make a selection:</h5>
+    </div>
     <div class="row">
         <div class="col-6 col-sm-3">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="sameTone" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="sameTone">
                 <label class="form-check-label" for="flexRadioDefault1">Same Tone</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="halfStep" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="halfStep">
                 <label class="form-check-label" for="flexRadioDefault1">Half Step</label>
             </div>
             <div class="form-check">
@@ -42,7 +45,7 @@
                 <label class="form-check-label" for="flexRadioDefault2">Whole Step</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="m3" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="m3">
                 <label class="form-check-label" for="flexRadioDefault1">Minor 3rd</label>
             </div>
             <div class="form-check">
@@ -50,7 +53,7 @@
                 <label class="form-check-label" for="flexRadioDefault2">Major 3rd</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="p4" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="p4">
                 <label class="form-check-label" for="flexRadioDefault1">Perfect 4th</label>
             </div>
             <div class="form-check">
@@ -61,7 +64,7 @@
 
         <div class="col-6 col-sm-3">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="p5" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="p5">
                 <label class="form-check-label" for="flexRadioDefault1">Perfect 5th</label>
             </div>
             <div class="form-check">
@@ -69,7 +72,7 @@
                 <label class="form-check-label" for="flexRadioDefault2">Minor 6th</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="M6" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="M6">
                 <label class="form-check-label" for="flexRadioDefault1">Major 6th</label>
             </div>
             <div class="form-check">
@@ -77,7 +80,7 @@
                 <label class="form-check-label" for="flexRadioDefault2">Minor 7th</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="M7" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="M7">
                 <label class="form-check-label" for="flexRadioDefault1">Major 7th</label>
             </div>
             <div class="form-check">
@@ -90,7 +93,7 @@
 
 <br>
 
-<div id = "PRC">
+<div id ="PRC" class="res">
     <h3 id = "result" class = "result"></h3>
 </div>
 

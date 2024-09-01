@@ -16,3 +16,10 @@
 .btn {
     margin: 1em;
 }
+
+.res {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 2em;
+}
