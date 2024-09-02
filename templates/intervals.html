@@ -164,6 +164,17 @@ function newInterval() {
 
 function guess() {
     var distance = Math.abs(tone1-tone2);
+    const nope = [
+        "Try again.",
+        "That's wrong.",
+        "Nope. You picked the wrong one.",
+        "Ummm...no.",
+        "Nope.  Did you even listen to the tones?",
+        "You got it...wrong.",
+        "Wrong.  You have chosen...poorly."
+    ]
+
+    nope[Math.floor(Math.random()*6)]
 
     if (distance == 0){
         var tSwitch = document.getElementById("sameTone");
@@ -171,7 +182,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are the same note!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
 
@@ -181,7 +192,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a half step apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 2) {
@@ -190,7 +201,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a whole step apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 3) {
@@ -199,7 +210,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor third apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 4) {
@@ -208,7 +219,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 3rd apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
 
@@ -219,7 +230,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a perfect 4th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 6) {
@@ -228,7 +239,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a tritone apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 7) {
@@ -237,7 +248,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a perfect 5th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 8) {
@@ -246,7 +257,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor 6th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 9) {
@@ -255,7 +266,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 6th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 10) {
@@ -264,7 +275,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor 7th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 11) {
@@ -273,7 +284,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 7th apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
     if (distance == 12){
@@ -282,7 +293,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are an octive apart!";
         }
         else {
-            resultDisplay.innerHTML = "Try again."
+            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
         }
     }
 }
