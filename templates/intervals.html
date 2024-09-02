@@ -174,7 +174,9 @@ function guess() {
         "Wrong.  You have chosen...poorly."
     ]
 
-    nope[Math.floor(Math.random()*6)]
+    function wrong(){
+        resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)];
+    }
 
     if (distance == 0){
         var tSwitch = document.getElementById("sameTone");
@@ -182,7 +184,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are the same note!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
 
@@ -192,7 +194,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a half step apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 2) {
@@ -201,7 +203,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a whole step apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 3) {
@@ -210,7 +212,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor third apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 4) {
@@ -219,18 +221,16 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 3rd apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
-
-
     if (distance == 5) {
         var tSwitch = document.getElementById("p4");
         if (tSwitch.checked){
             resultDisplay.innerHTML = "Correct! They are a perfect 4th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 6) {
@@ -239,7 +239,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a tritone apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 7) {
@@ -248,7 +248,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a perfect 5th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 8) {
@@ -257,7 +257,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor 6th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 9) {
@@ -266,7 +266,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 6th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 10) {
@@ -275,7 +275,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a minor 7th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 11) {
@@ -284,7 +284,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are a major 7th apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
     if (distance == 12){
@@ -293,7 +293,7 @@ function guess() {
             resultDisplay.innerHTML = "Correct! They are an octive apart!";
         }
         else {
-            resultDisplay.innerHTML = nope[Math.floor(Math.random()*6)]
+            wrong();
         }
     }
 }
